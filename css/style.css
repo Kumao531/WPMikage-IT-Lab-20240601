@@ -1,0 +1,714 @@
+.viewport-test {
+  height: 20px;
+  width: 100%;
+  background-color: #ffffab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.flexbox{
+  display: flex;
+}
+
+.flexbox-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexbox-row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 文章ブロックのフレックスボックス（親要素で設定） */
+.text-flexbox {
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* bodyの空白枠除き、全方向にFlexにする */
+body{
+  margin: 0;
+}
+
+/* コンテナーの最大サイズ */
+.container{
+  max-width: 1200px;
+  margin: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ========================== */
+/* カラー定義
+/* ========================== */
+footer{
+  color: #FFFFFF;
+  background-color: #669900;
+}
+
+/* 標準の文字色 */
+.std-tx-color {
+  color: #181818;
+}
+
+/* ========================== */
+/* フォント書体定義
+/* ========================== */
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.noto-sans-jp-<uniquifier> {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.noto-serif-jp-<uniquifier> {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+/* メインビジュアルの主メッセージ */
+.vm-main-message-fig {
+  font-family: "Noto Sans JPRobot";
+}
+/* メインビジュアルの服メッセージ */
+.vm-sub-message-fig {
+  font-family: "Noto Serif JP";
+}
+
+.regular-sans {
+  font-style: "Noto Sans JP";
+}
+
+.regular-serif {
+  font-style: "Noto Serif JP";
+}
+
+.regular-Eng {
+  font-style: Arial;
+}
+
+/* ========================== */
+/* フォント定義
+/* ========================== */
+
+h2 {
+  font-family: "Noto Sans JP";
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 2.4px;
+  color: #181818;
+}
+
+h3 {
+  font-family: "Noto Sans JP";
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 2.2px;
+  color: #181818;
+}
+
+.regtext {
+  font-family: "Noto Serif JP JP";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: 1.6px;
+  color: #181818;
+}
+
+/* ========================== */
+/* フォント装飾/装飾定義
+/* ========================== */
+/* シャドーをつける */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* 強調体 */
+.emphasis {
+  font-weight: 900;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================== */
+/* コンテナー定義/構造の定義
+/* ========================== */
+
+/* スマフォのflex-containerはカラム方向 */
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* 文字や画像の中央寄せ */
+.text-center{
+  text-align: center;
+}
+
+/* セクション区切りの上下空白 */
+.section-padding{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* ブロック要素の中央置き：親要素に指定 */
+.block-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* -------------------------------------------- */
+/*  ▼ スマフォの場合に適用するCSS ▼
+/* -------------------------------------------- */
+/*+ ===================================== +*/
+/*+ header部
+/** ===================================== +*/
+
+
+/* ヘッダー全体の領域の定義 */
+header {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  right: 0px;
+  height: 128px;
+  background-color: #181818;
+}
+
+/* ヘッダーのトレードマークの定義 */
+.LogoArea {
+  display: flex;
+  position: relative;
+  top: 48px;
+  left: 32px;
+  width: 224px;
+  height: 64px;
+  background-color: #C8E3ED;
+}
+.LogoMark {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 64px;
+  height: 64px;
+}
+.LogoMark img {
+  width: 100%;
+}
+.LogoText {
+  position: absolute;
+  top: 14px;
+  left: 64px;
+  width: 160px;
+  height: 24px;
+}
+.LogoTextFig {
+  font-family: "Noto Sans HK";
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 2.4px;
+  color: #c9c9c9;
+}
+
+/*** ヘッダーナビゲーションを非表示にする ***/
+.HeaderMenuColumn {
+  display: none;
+}
+/*+ until here about header ============= +*/
+
+/*+ ===================================== +*/
+/*+ main部
+/** ===================================== +*/
+/*+ ===================================== +*/
+/*+ ビジュアルメイン部
+/** ===================================== +*/
+
+/* ビジュアルイメージのサイズと表示絶対座標 */
+.vm-full {
+  position: absolute;
+  top: 144px;
+  left: 0px;
+  width: 100%;
+  height: 512px;
+  display: block;
+  margin: 0; /* 余白を無くす */
+  padding: 0; /* 余白を無くす */
+}
+
+/* 主メッセージのフォント設定*/
+.vm-main-message-fig {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: 3.6px;
+}
+/* 個別画面の主メッセージの追加情報 */
+.main-vm-message-top {
+  color: #242297;
+}
+
+/* 副メッセージのフォント設定 */
+.vm-sub-message-fig {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 1.6px;
+}
+
+/* 個別画面ごとの主メッセージのdivの設定 */
+.main-vm-massage-top {
+  width: 248px;
+  height: 50px;
+  top: 0px;
+  left: 0px;
+}
+
+/* 個別画面ごとの副メッセージのdivの設定 */
+.sub-vm-message-top {
+  width: 144px;
+  height:120px;
+  bottom: 0px;
+  margin-left: 45px;
+}
+
+/* 個別画面ごとのメッセージ・ボックスの設定 */
+.vm-message-box-top {
+  width: 248px;
+  height: 168px;
+  margin: 0 auto;
+}
+
+/* 個別画面ごとのビジュアルメッセージのイメージ上への配置 */
+.display-vm-message-top {
+  position: relative;
+  z-index: 51;
+  margin: 320px auto 0 auto;
+}
+
+/*+ until here about main-visual ======== +*/
+
+
+/*+ ===================================== +*/
+/*+ 個別画面ごとの定義を行う
+/** ===================================== +*/
+
+/*+ ===================================== +*/
+/*+ 主記述部（top）
+/** ===================================== +*/
+
+.main-description-top {
+  position: absolute;
+  top: 692px;
+  width: 100%;
+}
+
+.p-1 {
+  width: 100%;
+  margin-left: 16px;
+  padding-right: 48px;
+}
+
+.p-2 {
+  width: 100%;
+  margin-left: 32px;
+  padding-right: 48px;
+}
+
+/*** 会社の
+
+/* -------------------------------------------- */
+/*  ▼ タブレット以上の場合に適用するCSS ▼
+/* -------------------------------------------- */
+@media (min-width: 600px) {
+  .viewport-test{
+    background: #9eff8d; /* 黄色 */
+  }
+
+  /* タブレットより大きいサイズはflex-boxは列方向へ変更 */
+  .flex-container{
+    flex-direction: row;
+  }
+
+  /* ========================== */
+  /* フォント定義
+  /* ========================== */
+
+  h2 {
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 2.6px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 2.2px;
+  }
+
+  .regtext {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 1.8px;
+  }
+
+  /*+ ===================================== +*/
+  /*+ header部
+  /** ===================================== +*/
+  /* ヘッダー全体の領域の定義 */
+  header {
+    height: 184px;
+  }
+
+  /* ヘッダーのトレードマークの定義 */
+  .LogoArea {
+    top: 40px;
+    left: 64px;
+    width: 320px;
+    height: 96px;
+  }
+  .LogoMark {
+    top: 0px;
+    left: 0px;
+    width: 96px;
+    height: 96px;
+  }
+  .LogoMark img {
+    width: 100%;
+  }
+  .LogoText {
+    top: 21px;
+    left: 98px;
+    width: 336px;
+    height: 32px;
+  }
+  .LogoTextFig {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 3.2px;
+  }
+
+  /* ヘッダーナビゲーション表示にする */
+  .HeaderMenuColumn {
+    display: block;
+    position: relative;
+    top: 36px;
+    height: 32px;
+    padding-top: 8px;
+    margin: 0 auto;
+  }
+  .header-nav {
+    width: 600px;
+    height: 32px;
+    margin: auto;
+  }
+  /* ヘッダーナビゲーションを横並びにする */
+  .header-nav ul {
+    list-style-type: none; /* デフォルトのリストスタイルを削除 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    display: flex; /* フレックスボックスレイアウトを適用 */
+    justify-content: space-around; /* 要素間を均等に配置 */
+  }
+  .header-nav ul li {
+    margin: 0 10px; /* 各リスト項目の左右にマージンを追加 */
+  }
+  /* ナビゲーションのテキストスタイルとサイズを設定 */
+  .nav-h-text {
+    font-family: "Noto Sans HK";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+  }
+  /* ナビゲーションの文字装飾を指定する */
+  .header-nav ul li a {
+    text-decoration: none; /* リンクの下線を削除 */
+    /* color: #000; *//* リンクのカラーを黒に設定 */
+    padding: 5px 10px; /* パディングを追加してクリッカブルエリアを広げる */
+  }
+  .header-nav ul li a:hover {
+    background-color: #f0f0f0; /* ホバー時に背景色を変更 */
+  }
+  /*+ until here about header ============= +*/
+
+  /*+ ===================================== +*/
+  /*+ main部
+  /** ===================================== +*/
+  /*+ ===================================== +*/
+  /*+ ビジュアルメイン部
+  /** ===================================== +*/
+
+  /* ビジュアルイメージのサイズと表示絶対座標 */
+  .vm-full {
+    position: absolute;
+    top: 184px;
+    width: 100%;
+    height: 496px;
+    display: block;
+    margin: 0; /* 余白を無くす */
+    padding: 0; /* 余白を無くす */
+  }
+
+  /* 主メッセージのフォント設定*/
+  .vm-main-message-fig {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: 4.8px;
+  }
+
+  /* 副メッセージのフォント設定 */
+  .vm-sub-message-fig {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 2.0px;
+  }
+
+  /* 個別画面ごとの主メッセージのdivの設定 */
+  .main-vm-message-top {
+    width: 336px;
+    height: 52px;
+    top: 0px;
+    left: 0px;
+  }
+
+  /* 個別画面ごとの副メッセージのdivの設定 */
+  .sub-vm-message-top {
+    width: 200px;
+    height: 128px;
+    bottom: 0px;
+    margin-left: 87px;
+  }
+
+  /* 個別画面ごとのメッセージ・ボックスの設定 */
+  .vm-message-box-top {
+    width: 336px;
+    height: 216px;
+    margin: 0 auto;
+  }
+
+  /* 個別画面ごとのビジュアルメッセージのイメージ上への配置 */
+  .display-vm-message-top {
+    position: relative;
+    z-index: 51;
+    margin: 320px auto 0 auto;
+  }
+
+  /*+ until here about main-visual ======== +*/
+
+  /*+ ===================================== +*/
+  /*+ 主記述部（top）
+  /** ===================================== +*/
+
+  .main-description-top {
+    position: absolute;
+    top: 692px;
+    width: 100%;
+  }
+
+  .p-1 {
+    width: 100%;
+    margin-left: 20px;
+    padding-right: 80px;
+  }
+
+  .p-2 {
+    width: 100%;
+    margin-left: 40px;
+    padding-right: 80px;
+  }
+
+/* end media tablet phone */
+}
+
+/* -------------------------------------------- */
+/*  ▼PCの場合に適用するCSS ▼
+/* -------------------------------------------- */
+@media (min-width: 1024px) {
+  .viewport-test{
+    background: #C8E3ED; /* 水色 */
+  }
+
+  /* ========================== */
+  /* フォント定義
+  /* ========================== */
+
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 3.2px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 3.0px;
+  }
+
+  .regtext {
+    font-size: 22px;
+    line-height: 40px;
+    letter-spacing: 2.2px;
+  }
+
+  /*+ ===================================== +*?
+  /*+ header部
+  /** ===================================== +*?//
+  /* ヘッダー全体の領域の定義 */
+  header {
+    height: 184px;
+  }
+
+  /* ヘッダーのトレードマークの定義 */
+  .LogoArea {
+    top: 48px;
+    left: 64px;
+    width: 320px;
+    height: 96px;
+  }
+  .LogoMark {
+    top: 0px;
+    left: 0px;
+    width: 96px;
+    height: 96px;
+  }
+  .LogoMark img {
+    width: 100%;
+  }
+  .LogoText {
+    top: 21px;
+    left: 98px;
+    width: 336px;
+    height: 32px;
+  }
+  .LogoTextFig {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 3.2px;
+  }
+
+  /* ヘッダーナビゲーション表示を変更する */
+  .HeaderMenuColumn {
+    display: block;
+    position: relative;
+    top: 37px;
+    left: 400px;
+    height: 32px;
+    padding-top: 8px;
+    height: 32px;
+    background-color:#C8E3ED;
+  }
+  .HeaderNavigation {
+    width: 600px;
+    padding: 0px auto;
+    background-color:burlywood;
+  }
+
+  /*+ until here about header ============= +*/
+
+
+  /*+ ===================================== +*/
+  /*+ main部
+  /** ===================================== +*/
+  /*+ ===================================== +*/
+  /*+ ビジュアルメイン部
+  /** ===================================== +*/
+
+  /* ビジュアルイメージのサイズと表示絶対座標 */
+  .vm-full {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 864px;
+    display: block;
+    margin: 0; /* 余白を無くす */
+    padding: 0; /* 余白を無くす */
+  }
+
+  /* 主メッセージのフォント設定*/
+  .vm-main-message-fig {
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: 9.6px;
+  }
+
+  /* 副メッセージのフォント設定 */
+  .vm-sub-message-fig {
+    font-size: 32px;
+    line-height: 72px;
+    letter-spacing: 3.2px;
+  }
+
+  /* 個別画面ごとの主メッセージのdivの設定 */
+  .main-vm-message-top {
+    width: 664px;
+    height: 96px;
+    top: 0px;
+    left: 0px;
+  }
+
+  /* 個別画面ごとの副メッセージのdivの設定 */
+  .sub-vm-message-top {
+    width: 288px;
+    height: 288px;
+    bottom: 0px;
+    margin-left: 194px;
+  }
+
+  /* 個別画面ごとのメッセージ・ボックスの設定 */
+  .vm-message-box-top {
+    width: 664px;
+    height: 232px;
+    margin: 0 auto;
+  }
+
+  /* 個別画面ごとのビジュアルメッセージのイメージ上への配置 */
+  .display-vm-message-top {
+    position: relative;
+    z-index: 51;
+    margin: 448px auto 0 auto;
+  }
+
+  /*+ until here about main-visual ======== +*/
+
+  /*+ ===================================== +*/
+  /*+ 主記述部
+  /** ===================================== +*/
+
+  .main-description-top {
+    position: absolute;
+    top: 1082px;
+    width: 100%;
+  }
+
+  .p-1 {
+    width: 100%;
+    margin-left: 20px;
+    padding-right: 80px;
+  }
+
+  .p-2 {
+    width: 100%;
+    margin-left: 40px;
+    padding-right: 80px;
+  }
+
+/* end media pc phone */
+}

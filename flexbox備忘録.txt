@@ -1,0 +1,154 @@
+@media (min-width: 600px) {
+  .flexbox .item3{
+    width: 120px;
+  }
+  .flexbox .item4{
+    flex: 1;
+  }
+}
+
+
+flex-grow （伸長率）：Flexコンテナの領域に収めるために伸長するか
+flex-shrink（縮小率）：Flexコンテナの領域に収めるために縮小するか
+flex-basis （初期幅）：そのFlexアイテムの幅の初期設定
+
+
+ナビゲーションリンクを横方向に並べるには、CSSの flexboxレイアウトや inline-blockなどの方法を使用すると簡単に実現できます。
+以下に flexboxを使った方法を示します。
+
+<nav>
+    <ul>
+        <li><a href="#">トップ</a></li>
+        <li><a href="#">会社紹介</a></li>
+        <li><a href="#">サービス説明</a></li>
+        <li><a href="#">About US</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+    </ul>
+</nav>
+
+
+CSS:
+
+nav ul {
+    list-style-type: none; /* デフォルトのリストスタイルを削除 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+    display: flex; /* フレックスボックスレイアウトを適用 */
+    justify-content: space-around; /* 要素間を均等に配置 */
+}
+
+nav ul li {
+    margin: 0 10px; /* 各リスト項目の左右にマージンを追加 */
+}
+
+nav ul li a {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: #000; /* リンクのカラーを黒に設定 */
+    padding: 5px 10px; /* パディングを追加してクリッカブルエリアを広げる */
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0; /* ホバー時に背景色を変更 */
+}
+
+
+ナビゲーションを縦に並べるには、
+
+nav ul {
+    list-style-type: none; /* デフォルトのリストスタイルを削除 */
+    padding: 0; /* パディングをリセット */
+    margin: 0; /* マージンをリセット */
+}
+
+nav ul li {
+    margin-bottom: 10px; /* 各リスト項目の下にマージンを追加 */
+}
+
+nav ul li a {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: #000; /* リンクのカラーを黒に設定 */
+    display: block; /* リンクをブロック要素にすることで、全体をクリック可能に */
+    padding: 5px 10px; /* パディングを追加してクリッカブルエリアを広げる */
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f0; /* ホバー時に背景色を変更 */
+}
+
+
+イメージを画面の横いっぱいに表示する方法は、主にHTMLとCSSを使って実現できます。以下にその手順を示します。
+
+HTML:
+
+!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画面いっぱいの画像</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="path_to_your_image.jpg" alt="例の画像" class="full-width-image">
+</body>
+</html>
+
+CSS:
+
+* styles.css */
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0; /* 余白を無くす */
+    padding: 0; /* 余白を無くす */
+}
+
+width: 100%;：画像を横いっぱいに広げます。
+height: auto;：画像の縦横比を維持して高さを自動調整します。
+display: block;：画像をブロック要素にすることで、余分な空白や周りの要素の影響を受けないようにします。
+margin: 0;と padding: 0;：画像の周りに余分な余白を無くします。
+
+もし、画像の上部や下部に余白が残る場合、bodyのCSSも調整すると良いでしょう。例えば以下のように全体のボックスモデルをリセットします：
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+また、背景として画面いっぱいに画像を表示したい場合は、以下のようにCSSのbackground-imageを使う方法もあります。
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景画像</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('path_to_your_image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
+
+background-size: cover;：画像が画面全体を覆うようにサイズを調整します。
+background-position: center;：画像の中心を表示します。
+background-repeat: no-repeat;：画像が繰り返されないようにします。
+
+display: flex;
+width: 320px;
+padding: 0px 9px 32px 0px;
+flex-direction: column;
+align-items: center;
