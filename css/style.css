@@ -320,19 +320,219 @@ header {
   width: 100%;
 }
 
-.p-1 {
+.p-1-top {
   width: 100%;
   margin-left: 16px;
   padding-right: 48px;
 }
 
-.p-2 {
+.p-2-top {
   width: 100%;
   margin-left: 32px;
   padding-right: 48px;
 }
 
-/*** 会社の
+/* レイアウト変更の設定 */
+
+/*** 会社の説明欄のレイアウトの設定 ***/
+/*** スマフォでは縦積みに ***/
+
+.layout-change-top {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 会社説明のタイトル行 */
+.intoro-title-tp {
+  display: flex;
+  flex-direction: row;
+}
+
+/* 会社説明のタイトル行 */
+.intro-title-top {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+/* タイトルを改行させない */
+.intro-title-top h3 span {
+  display: inline-block;
+}
+/* ダッシュの描画 */
+.dash-1-top {
+  width : 150px;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 34px;
+  margin-left: 8px;
+  opacity: 0.6;
+}
+
+/*** 説明ボックスの構成 ***/
+/* 説明部の全体枠 */
+.introduce-area-top {
+  width: 100%;
+  height: 2176px;
+  margin:0 auto;
+  background-color: #f8b4b4;
+}
+
+/* ボックス群を収納する全体枠 */
+.layout-change-top {
+  width: 100%;
+  height: 1016px;
+  margin: 0 auto;
+  background-color: #96faff;
+}
+
+/* １つの掲示枠 */
+.frame-top {
+  width: 373px;
+  height: 508px;
+  margin: 0 auto;
+  background-color: #7aff78;
+}
+
+/* 実際の１つの掲示の表示部分 */
+.one-display-top {
+  width: 272px;
+  height: 472px;
+  margin: 0 auto;
+  background-color: #ececec;
+}
+
+/* 表示画の部分 */
+.explane-box-top {
+  width: 272px;
+  height: 340px;
+  margin: 0 auto;
+  border: 0.5px;
+  border-style: solid;
+  border-color:rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  background-color: #b181ff;
+}
+
+/* ボタン部分の全体枠 */
+.jamp-box-top {
+  width: 200px;
+  height: 40px;
+  margin: 36px auto 0 auto;
+  background-color: #ffde8a;
+}
+
+/*** 説明ボックスの個々の部分の構成 ***/
+/* 背景部分 */
+.box-image-top {
+  width: 272px;
+  height: 340px;
+  background-color: #000000;
+}
+.graphic-top {
+  width: 272px;
+  height: 340px;
+}
+/* 説明部の全体 */
+.box-top {
+  width: 272px;
+  height: 340px;
+}
+/* タイトル文の部分 */
+.title-box-top {
+  width: 272px;
+  height: 80px;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 115, 115, 0.50);
+}
+.title-box-top > p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 2.0px;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+/* 説明文の部分 */
+/* 会社概要の時のパターン */
+.explain-box-top {
+  width: 272px;
+  height: 260px;
+}
+.explain-box-top ul {
+  list-style-type: disc;
+  margin: 24px auto 0 auto;
+}
+.explain-box-top  ul li {
+  font-style: "Noto Serif JP";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 1.0px;
+  margin: auto 8px 12px -8px;
+}
+/* サービスへの心構えの時のパターン */
+/* 企業理念の時のパターン */
+.explain-box-2-top {
+  width: 272px;
+  height: 260px;
+}
+.explain-box-2-top ul {
+  list-style-type: none;
+  margin: 32px auto 0 auto;
+}
+.explain-box-2-top  ul li {
+  font-style: "Noto Serif JP";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 1.6px;
+  margin: auto 8px 16px -8px;
+}
+/* モットーの時のパターン */
+.explain-box-3-top {
+  width: 272px;
+  height: 260px;
+}
+.explain-box-3-top ul {
+  list-style-type: none;
+  margin: 32px auto 0 auto;
+}
+.explain-box-3-top  ul li {
+  font-style: "Noto Serif JP";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 1.6px;
+  margin: auto 8px 16px 16px;
+}
+/* 文字部分の上方への移動 */
+.box-text-top {
+  margin-top: -340px;
+}
+/*** ボタン部分 ***/
+.button-img-top {
+  width: 200px;
+  height: 40px;
+}
+.jamp-plate-top {
+  width: 100%;
+  height: 100%;
+}
+.jump-text-top p {
+  font-style: "Noto Sans JP";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: 1.28px;
+  color: #605601;
+}
+/* テキスト部の上への移動 */
+.jump-text-top {
+  margin-top: -48px;
+  margin-left: 48px;
+}
 
 /* -------------------------------------------- */
 /*  ▼ タブレット以上の場合に適用するCSS ▼
@@ -523,17 +723,109 @@ header {
     width: 100%;
   }
 
-  .p-1 {
+  .p-1-top {
     width: 100%;
     margin-left: 20px;
     padding-right: 80px;
   }
 
-  .p-2 {
+  .p-2-top {
     width: 100%;
     margin-left: 40px;
     padding-right: 80px;
   }
+
+  /*** 会社の説明欄のレイアウトの設定 ***/
+  /*** タブレットから最下段は横並びに ***/
+  .layout-change-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* ダッシュの描画 */
+  .dash-1-top {
+    width : 200px;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 39px;
+    margin-left: 8px;
+    opacity: 0.6;
+  }
+
+/**/
+  /*** 説明ボックスの構成 ***/
+  /* 説明部の全体枠 */
+  .introduce-area-top {
+    height: 1088px;
+  }
+
+  /* ボックス群を収納する全体枠 */
+  .layout-change-top {
+    height: 456px;
+  }
+
+  /* １つの掲示枠 */
+  .frame-top {
+    width: 272px;
+    height: 416px;
+  }
+
+  /* 実際の１つの掲示の表示部分 */
+  .one-display-top {
+    width: 272px;
+    height: 416px;
+  }
+
+  /* 表示画の部分 */
+
+  /* ボタン部分の全体枠 */
+
+  /*** 説明ボックスの個々の部分の構成 ***/
+  /* 背景部分 */
+
+  /* 説明部の全体 */
+  /* タイトル文の部分 */
+  .title-box-top > p {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2.2px;
+    margin-top: 10px;
+  }
+  /* 説明文の部分 */
+  .explain-box-top ul {
+    list-style-type: disc;
+    margin: 24px auto 0 auto;
+  }
+  .explain-box-top  ul li {
+    font-size: 16px;
+    line-height: 28px;
+    margin: auto 8px 10px -8px;
+  }
+    /* 説明文の部分 */
+  .explain-box-2-top ul {
+    list-style-type: none;
+    margin: 40px auto 0 auto;
+  }
+  .explain-box-2-top  ul li {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 18px 8px 10px -8px;
+  }
+  /* 説明文の部分 */
+  .explain-box-3-top ul {
+    list-style-type: none;
+    margin: 40px auto 0 auto;
+  }
+  .explain-box-3-top  ul li {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 18px 8px 10px 24px;
+  }
+
+  /* 文字部分の上方への移動 */
+
+  /*** ボタン部分 ***/
 
 /* end media tablet phone */
 }
@@ -698,16 +990,199 @@ header {
     width: 100%;
   }
 
-  .p-1 {
+  .p-1-top {
     width: 100%;
     margin-left: 20px;
     padding-right: 80px;
   }
 
-  .p-2 {
+  .p-2-top {
     width: 100%;
     margin-left: 40px;
     padding-right: 80px;
+  }
+
+  /* ダッシュの描画 */
+  .dash-1-top {
+    width : 200px;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 46px;
+    margin-left: 8px;
+    opacity: 0.6;
+  }
+
+/**/
+
+  /* ダッシュの描画 */
+  .dash-1-top {
+    width : 200px;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: 47px;
+    margin-left: 8px;
+    opacity: 0.6;
+  }
+
+/*+++++*/
+  /*** 説明ボックスの構成 ***/
+  /* 説明部の全体枠 */
+  .introduce-area-top {
+    height: 1112px;
+  }
+
+  /* ボックス群を収納する全体枠 */
+  .layout-change-top {
+    width: 100%;
+    height: 556px;
+    margin: 0 auto;
+    background-color: #96faff;
+  }
+
+  /* １つの掲示枠 */
+  .frame-top {
+    width: 300px;
+    height: 556px;
+    margin: 0 auto;
+    background-color: #7aff78;
+  }
+
+  /* 実際の１つの掲示の表示部分 */
+  .one-display-top {
+    width: 300px;
+    height: 520px;
+    margin: 0 auto;
+    background-color: #ececec;
+  }
+
+  /* 表示画の部分 */
+  .explane-box-top {
+    width: 300px;
+    height: 396px;
+    margin: 0 auto;
+    border: 0.5px;
+    border-style: solid;
+    border-color:rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: #b181ff;
+  }
+
+  /* ボタン部分の全体枠 */
+  .jamp-box-top {
+    width: 300px;
+    height: 60px;
+    margin: 40px auto 0 auto;
+    background-color: #ffde8a;
+  }
+
+  /*** 説明ボックスの個々の部分の構成 ***/
+  /* 背景部分 */
+  .box-image-top {
+    width: 300px;
+    height: 340px;
+    background-color: #000000;
+  }
+  .graphic-top {
+    width: 300px;
+    height: 396px;
+  }
+  /* 説明部の全体 */
+  .box-top {
+    width: 300px;
+    height: 300px;
+  }
+  /* タイトル文の部分 */
+  .title-box-top {
+    width: 300px;
+    height: 96px;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 115, 115, 0.50);
+  }
+  .title-box-top > p {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 2.4px;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+  }
+  /* 説明文の部分 */
+  .explain-box-top {
+    width: 300px;
+    height: 300px;
+  }
+  .explain-box-top ul {
+    list-style-type: disc;
+    margin: 24px auto 0 auto;
+  }
+  .explain-box-top  ul li {
+    font-style: "Noto Serif JP";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: auto 12px 0 0 4px;
+    padding-right: 8px;
+  }
+  .explain-box-2-top {
+    width: 300px;
+    height: 300px;
+  }
+  .explain-box-2-top ul {
+    list-style-type: none;
+    margin: 32px auto 0 8px;
+  }
+  .explain-box-2-top  ul li {
+    font-style: "Noto Serif JP";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: auto 18px 0 0 4px;
+    padding-right: 8px;
+  }
+  .explain-box-3-top {
+    width: 300px;
+    height: 300px;
+  }
+  .explain-box-3-top ul {
+    list-style-type: none;
+    margin: 32px auto 0 10px;
+  }
+  .explain-box-3-top  ul li {
+    font-style: "Noto Serif JP";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+    margin: auto 12px 0 0 4px;
+    padding-right: 8px;
+  }
+  /* 文字部分の上方への移動 */
+  .box-text-top {
+    margin-top: -340px;
+  }
+  /*** ボタン部分 ***/
+  .button-img-top {
+    width: 240px;
+    height: 48px;
+    margin-left: 30px;
+  }
+  .jamp-plate-top {
+    width: 100%;
+    height: 100%;
+  }
+  .jump-text-top p {
+    font-style: "Noto Sans JP";
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    letter-spacing: 1.28px;
+    color: #605601;
+  }
+  /* テキスト部の上への移動 */
+  .jump-text-top {
+    margin-top: -69px;
+    margin-left: 86px;
   }
 
 /* end media pc phone */

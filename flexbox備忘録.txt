@@ -1,3 +1,5 @@
+🔷
+
 @media (min-width: 600px) {
   .flexbox .item3{
     width: 120px;
@@ -13,7 +15,7 @@ flex-shrink（縮小率）：Flexコンテナの領域に収めるために縮�
 flex-basis （初期幅）：そのFlexアイテムの幅の初期設定
 
 
-ナビゲーションリンクを横方向に並べるには、CSSの flexboxレイアウトや inline-blockなどの方法を使用すると簡単に実現できます。
+🔷ナビゲーションリンクを横方向に並べるには、CSSの flexboxレイアウトや inline-blockなどの方法を使用すると簡単に実現できます。
 以下に flexboxを使った方法を示します。
 
 <nav>
@@ -52,7 +54,7 @@ nav ul li a:hover {
 }
 
 
-ナビゲーションを縦に並べるには、
+🔷ナビゲーションを縦に並べるには、
 
 nav ul {
     list-style-type: none; /* デフォルトのリストスタイルを削除 */
@@ -76,7 +78,7 @@ nav ul li a:hover {
 }
 
 
-イメージを画面の横いっぱいに表示する方法は、主にHTMLとCSSを使って実現できます。以下にその手順を示します。
+🔷イメージを画面の横いっぱいに表示する方法は、主にHTMLとCSSを使って実現できます。以下にその手順を示します。
 
 HTML:
 
@@ -152,3 +154,40 @@ width: 320px;
 padding: 0px 9px 32px 0px;
 flex-direction: column;
 align-items: center;
+
+🔷Flexboxで幅が固定のレイアウトと可変のレイアウトの混合の方法
+
+HTML:
+
+<div class="container">
+  <div class="sidebar">Sidebar (固定幅)</div>
+  <div class="main">Main Content (可変幅)</div>
+</div>
+
+CSS:
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px; /* 固定幅 */
+  background-color: #f0f0f0;
+}
+
+.main {
+  flex: 1; /* 可変幅 */
+  background-color: #d0d0d0;
+}
+
+
+.container:
+
+display: flex;をセットすることで、子要素がFlexboxレイアウトとなります。
+.sidebar:
+
+固定幅のためにwidth: 200px;を指定します。
+.main:
+
+flex: 1;を指定することで、残りのスペースを全て占めるようになります。
+このように設定することで、サイドバーが常に幅200pxに固定され、メインコンテンツが残りのスペースを占める形になります。スクリーンのサイズが変更されても、メインコンテンツが自動的に調整されます。
