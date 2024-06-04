@@ -16,14 +16,21 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <!-- JavaScript -->
+    <style>
+      .text-container {
+        width: 100%;
+      }
+    </style>
 
+    <script defer src="./js/script.js"></script>
   </head>
 
-  <body>
+  <body class="text-container" id="textContainer">
     <div class="viewport-test">*indicator*</div>
 
     <header>
-      <div id="header" class="container">
+      <div id="header" class="container header-container">
         <div class="TMColumn">
           <div class="TradeMark">
             <div class="LogoArea">
@@ -92,9 +99,6 @@
             </div>
           </div>
         </div>
-
-
-<!--******-->
 
         <!-- *** 説明１：会社概要 *** -->
         <div class="box-container-top flexbox-column">
@@ -371,13 +375,93 @@
 
         </div>
         <!-- ここまで *** 説明２：心構え *** -->
-<!--******-->
-
       </section>
     </main>
 
-    <footer>
-      footer
+    <footer class="footer">
+      <!-- フッター全体をカバーする枠 -->
+      <div class="footer-area">
+        <!-- フッターの表示エリア -->
+        <div class="footer-indicate-area grid-container">
+          <!-- ナビゲーションのエリア -->
+          <div class="FooterMenuArea">
+            <div class="footer-title">
+              <p class="footer-tilte-letter">
+                メニュー
+              </p>
+            </div>
+            <div class="FooterNavigation">
+              <nav class="footer-nav nav-f-text">
+                <ul>
+                  <li><a href="#">トップ</a></li>
+                  <li><a href="#">会社紹介</a></li>
+                  <li><a href="#">サービス説明</a></li>
+                  <li><a href="#">About US</a></li>
+                  <li><a href="#">お問い合わせ</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- ここまで：ナビゲーションのエリア -->
+
+          <!-- 住所表示のエリア -->
+          <div class="footer-address-area">
+            <div class="footer-title">
+              <p class="footer-tilte-letter">
+                住所
+              </p>
+            </div>
+            <div class="footer-content">
+              <p class="footer-content-letter">
+                〒224-0033<br>
+                神奈川県横浜市都筑区茅ケ崎東<br>
+                1-1-5-503
+              </p>
+            </div>
+          </div>
+          <!-- ここまで：住所表示のエリア -->
+
+          <!-- 電話・電子メールのエリア -->
+          <div class="footer-telmail-area">
+            <div class="footer-title">
+              <p class="footer-tilte-letter">
+                電話・Eメール
+              </p>
+            </div>
+            <div class="footer-content">
+              <p class="footer-content-letter">
+                Tel: 080-3443-1638<br>
+                Email:<br>
+                t-ariyoshi@mikage-it-lab.com
+              </p>
+            </div>
+          </div>
+          <!-- ここまで：電話・電子メールのエリア -->
+
+          <!-- 営業時間のエリア -->
+          <div class="footer-businesshours">
+            <div class="footer-title">
+              <p class="footer-tilte-letter">
+                営業時間
+              </p>
+            </div>
+            <div class="footer-content">
+              <p class="footer-content-letter">
+                土日、祝日、ゴールデンウィークと中日、<br>
+                年末年始を除く平日<br>
+                10:00 ～ 12:00<br>
+                13:00 ～ 17:00
+              </p>
+            </div>
+          </div>
+          <!-- ここまで：営業時間のエリア -->
+
+        </div>
+        <!-- ここまで：フッターの表示エリア -->
+        <!-- コピーライトの表示エリア -->
+        <div class="copywrite-area">コピーライト</div>
+        <!-- ここまで：コピーライトの表示エリア -->
+      </div>
     </footer>
   </body>
 </html>
