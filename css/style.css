@@ -8,28 +8,6 @@
   box-sizing: border-box;
 }
 
-.flexbox{
-  display: flex;
-}
-
-.flexbox-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flexbox-row {
-  display: flex;
-  flex-direction: row;
-}
-
-/* 文章ブロックのフレックスボックス（親要素で設定） */
-.text-flexbox {
-  display: flex;
-  width: 320px;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* bodyの空白枠除き、全方向にFlexにする */
 body{
   margin: 0;
@@ -37,7 +15,7 @@ body{
 
 /* コンテナーの最大サイズ */
 .container{
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -50,6 +28,11 @@ body{
 /* 標準の文字色 */
 .std-tx-color {
   color: #181818;
+}
+
+header, footer {
+/*  background-color: #181818; */
+  background-color: #181818;
 }
 
 /* ========================== */
@@ -142,46 +125,24 @@ h3 {
 /* コンテナー定義/構造の定義
 /* ========================== */
 
-/* スマフォのflex-containerはカラム方向 */
-.flex-container{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-/* 文字や画像の中央寄せ */
-.text-center{
-  text-align: center;
-}
-
 /* セクション区切りの上下空白 */
 .section-padding{
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
-/* ブロック要素の中央置き：親要素に指定 */
-.block-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+.p-nowrap {
+  display: inline-block;
 }
 
 /* -------------------------------------------- */
 /*  ▼ スマフォの場合に適用するCSS ▼
 /* -------------------------------------------- */
-main {
-  width: 100%;
-  min-height: 1390px;
-}
 /*+ ===================================== +*/
 /*+ body部
 /** ===================================== +*/
 body {
-  display: flex;
-  flex-direction: column;
+
 }
 
 /*+ ===================================== +*/
@@ -191,40 +152,42 @@ body {
 /* ヘッダー全体の領域の定義 */
 header {
   display: block;
-  position: absolute;
-  top: 16px;
-  left: 0px;
-  right: 0px;
-  height: 128px;
-  background-color: #181818;
+  height: 160px;
+  width: 100%;
 }
 
 /* ヘッダーのトレードマークの定義 */
-.LogoArea {
+.trade-mark {
   display: flex;
   position: relative;
-  top: 48px;
-  left: 32px;
-  width: 224px;
+  top: 80px;
+  left: 24px;
+  width: 208px;
   height: 64px;
-/*  background-color: #C8E3ED;*/
+/*  background-color: orange;*/
 }
 .LogoMark {
+  display: block;
   position: relative;
   top: 0px;
   left: 0px;
   width: 64px;
   height: 64px;
+  margin: 0;
+/*  background-color: #62f56c;*/
 }
 .LogoMark img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .LogoText {
-  position: absolute;
-  top: 14px;
-  left: 64px;
-  width: 160px;
+  display: block;
+  position: relative;
   height: 24px;
+  margin-top: 35px;
+  padding-left: 0 0 0 2px;
+/*  background-color: #fe6464;*/
 }
 .LogoTextFig {
   font-family: "Noto Sans HK";
@@ -236,120 +199,136 @@ header {
 }
 
 /*** ヘッダーナビゲーションを非表示にする ***/
-.HeaderMenuColumn {
+.header-nav {
   display: none;
 }
+
+/*** ハンバーガーメニュー ***/
+.hamburger-menu {
+  display: block;
+  position: fixed;
+  top: 16px;
+  right: 8px;
+  width: 72px;
+  height: 72px;
+}
+.hamburger-menu img {
+  width: 100%;
+  object-fit: cover;
+}
+
 /*+ until here about header ============= +*/
 
 /*+ ===================================== +*/
 /*+ footer部
 /** ===================================== +*/
-.footer {
-  width: 100%;
-}
 
-/* フッタータイトル文字 */
+/* フッターのサイズ・文字色 */
 .footer-title {
-  height: 24px;
-  width: 100%;
-}
-.footer-tilte-letter {
   font-style: "Noto Serif JP";
   font-size: 18px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 24px;
   letter-spacing: 1.8px;
-  color: #c9c9c9;
+  color: #E7E6F3;
   text-align: left;
 }
-/* フッターの内容説明 */
-.footer-content {
-  margin-top: 8px;
-  margin-left: 40px
-}
-.footer-content-letter {
-  font-family: "Noto Serif JP";
+.footer-text {
+  font-style: "Noto Serif";
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 1.6px;
-  color: #8a8a8a;
+  color: #8A8A8A;
 }
 
-/* フッターの表示枠 */
-.footer-area {
+/* フッターの構造 */
+.footer {
   width: 100%;
-  margin-top: 24px;
+  margin: 0 auto;
+/*  background-color: #cfb8b8;*/
 }
 
-.footer-indicate-area {
-  width: 100%;
+.footer-grid {
   display: grid;
-  grid-template-columns: 1fr 384px 1fr;
-  grid-template-rows: repeat( 4, auto );
-  margin-top: 32px;
-  margin-bottom: 16px;
-  background-color: #ffe2c1;
+
+  grid-template-columns: 1fr 360px 1fr;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 32px;
+  width: 100%;
+  margin: 32px auto 0;
+  padding: 32px 24px 0 24px;
 }
 
-.FooterMenuArea {
+.footer-nav {
   grid-column: 2;
   grid-row: 1;
-  width: 100%;
-  margin-bottom: 16px;
-  background-color: #7c8a1f;
 }
 
-.footer-address-area {
+.footer-address {
   grid-column: 2;
   grid-row: 2;
-  margin-bottom: 16px;
-  background-color: #aca6ff;
 }
 
-.footer-telmail-area {
+.footer-telmail {
   grid-column: 2;
   grid-row: 3;
-  margin-bottom: 16px;
-  background-color: #ff83a8;
 }
 
-.footer-businesshours {
+.footer-business-hours {
   grid-column: 2;
   grid-row: 4;
-  margin-bottom: 16px;
-  background-color: #6d79ff;
 }
 
+.footer-text {
+  margin-top: 16px;
+  margin-left: 40px;
+}
 
 /* ナビゲーション */
-.FooterNavigation {
-  margin: 24px 0 0 40px;
+.footer-nav nav {
+  margin-top: 24px;
+  margin-left: 40px;
 }
-.FooterNavigation nav ul {
-  list-style-type: none; /* デフォルトのリストスタイルを削除 */
-  padding: 0; /* パディングをリセット */
-  margin: 0; /* マージンをリセット */
+.footer-nav nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
-.FooterNavigation nav ul li {
-  margin-bottom: 16px; /* 各リスト項目の下にマージンを追加 */
+.footer-nav nav ul li {
+  margin-bottom: 32px;
+  font-family: "Noto Sans HK";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 2.16px;
 }
-.FooterNavigation nav ul li a {
-  text-decoration: none; /* リンクの下線を削除 */
-  color: #7241fe; /* リンクのカラーを設定 */
-  display: block; /* リンクをブロック要素にすることで、全体をクリック可能に */
-  padding: 5px 10px; /* パディングを追加してクリッカブルエリアを広げる */
-}
-.FooterNavigation nav ul li a:hover {
-    background-color: #f0f0f0; /* ホバー時に背景色を変更 */
-}
-
-.footer-area {
+.footer-nav nav ul li a {
+  text-decoration: none;
+  color: #7241FE;
   display: block;
-  width: 100%;
-  background-color: #a5a5a5;
+  padding: 5px 10px;
+}
+.footer-nav nav ul li a:hover {
+  color: #ecd525;
 }
 
+/* コピーライト */
+.footer-copyright {
+  display: flex;
+  width: 100%;
+  height: 68px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.copyright-text {
+  font-style: "Noto Serif";
+  font-size: 16px;
+  line-height: 16px;
+  margin: 0 16px 16px 0;
+  color: #FBF4F4;
+}
 
 /*+ until here about footer ============= +*/
 
@@ -359,71 +338,6 @@ header {
 /*+ ===================================== +*/
 /*+ ビジュアルメイン部
 /** ===================================== +*/
-
-.main-visual {
-  display:
-}
-/* ビジュアルイメージのサイズと表示絶対座標 */
-.vm-full {
-  position: absolute;
-  top: 144px;
-  left: 0px;
-  width: 100%;
-  height: 512px;
-  display: block;
-  margin: 0; /* 余白を無くす */
-  padding: 0; /* 余白を無くす */
-}
-
-/* 主メッセージのフォント設定*/
-.vm-main-message-fig {
-  font-size: 36px;
-  font-weight: 900;
-  line-height: 40px;
-  letter-spacing: 3.6px;
-}
-/* 個別画面の主メッセージの追加情報 */
-.main-vm-message-top {
-  color: #242297;
-}
-
-/* 副メッセージのフォント設定 */
-.vm-sub-message-fig {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 30px;
-  letter-spacing: 1.6px;
-}
-
-/* 個別画面ごとの主メッセージのdivの設定 */
-.main-vm-massage-top {
-  width: 248px;
-  height: 50px;
-  top: 0px;
-  left: 0px;
-}
-
-/* 個別画面ごとの副メッセージのdivの設定 */
-.sub-vm-message-top {
-  width: 144px;
-  height:120px;
-  bottom: 0px;
-  margin-left: 45px;
-}
-
-/* 個別画面ごとのメッセージ・ボックスの設定 */
-.vm-message-box-top {
-  width: 248px;
-  height: 168px;
-  margin: 0 auto;
-}
-
-/* 個別画面ごとのビジュアルメッセージのイメージ上への配置 */
-.display-vm-message-top {
-  position: relative;
-  z-index: 51;
-  margin: 320px auto 0 auto;
-}
 
 /*+ until here about main-visual ======== +*/
 
@@ -436,237 +350,12 @@ header {
 /*+ 主記述部（top）
 /** ===================================== +*/
 
-main {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-}
-
-.main-description-top {
-  display: block;
-  position: absolute;
-  top: 692px;
-  width: 100%;
-}
-
-.p-1-top {
-  width: 100%;
-  margin-left: 16px;
-  padding-right: 48px;
-}
-
-.p-2-top {
-  width: 100%;
-  margin-left: 32px;
-  padding-right: 48px;
-}
-
-/* レイアウト変更の設定 */
-
-/*** 会社の説明欄のレイアウトの設定 ***/
-/*** スマフォでは縦積みに ***/
-
-.layout-change-top {
-  display: flex;
-  flex-direction: column;
-}
-
-/* 会社説明のタイトル行 */
-.intoro-title-tp {
-  display: flex;
-  flex-direction: row;
-}
-
-/* 会社説明のタイトル行 */
-.intro-title-top {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-}
-/* タイトルを改行させない */
-.intro-title-top h3 span {
-  display: inline-block;
-}
-/* ダッシュの描画 */
-.dash-1-top {
-  width : 150px;
-  height: 4px;
-  border-radius: 2px;
-  margin-top: 34px;
-  margin-left: 8px;
-  opacity: 0.6;
-}
-
-/*** 説明ボックスの構成 ***/
-/* 説明部の全体枠 */
-.introduce-area-top {
-  width: 100%;
-  height: 2176px;
-  margin:0 auto;
-/*  background-color: #f8b4b4; */
-}
-
-/* ボックス群を収納する全体枠 */
-.layout-change-top {
-  width: 100%;
-  height: 1016px;
-  margin: 0 auto;
-/*  background-color: #96faff;*/
-}
-
-/* １つの掲示枠 */
-.frame-top {
-  width: 373px;
-  height: 508px;
-  margin: 0 auto;
-/*  background-color: #7aff78;*/
-}
-
-/* 実際の１つの掲示の表示部分 */
-.one-display-top {
-  width: 272px;
-  height: 472px;
-  margin: 0 auto;
-/*  background-color: #ececec; */
-}
-
-/* 表示画の部分 */
-.explane-box-top {
-  width: 272px;
-  height: 340px;
-  margin: 0 auto;
-  border: 0.5px;
-  border-style: solid;
-  border-color:rgba(0, 0, 0, 0.25);
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-/*  background-color: #b181ff; */
-}
-
-/* ボタン部分の全体枠 */
-.jamp-box-top {
-  width: 200px;
-  height: 40px;
-  margin: 36px auto 0 auto;
-/*  background-color: #ffde8a;*/
-}
-
-/*** 説明ボックスの個々の部分の構成 ***/
-/* 背景部分 */
-.box-image-top {
-  width: 272px;
-  height: 340px;
-/*  background-color: #000000; */
-}
-.graphic-top {
-  width: 272px;
-  height: 340px;
-}
-/* 説明部の全体 */
-.box-top {
-  width: 272px;
-  height: 340px;
-}
-/* タイトル文の部分 */
-.title-box-top {
-  width: 272px;
-  height: 80px;
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(255, 115, 115, 0.50);
-}
-.title-box-top > p {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: 2.0px;
-  width: 100%;
-  text-align: center;
-  margin-top: 10px;
-}
-/* 説明文の部分 */
-/* 会社概要の時のパターン */
-.explain-box-top {
-  width: 272px;
-  height: 260px;
-}
-.explain-box-top ul {
-  list-style-type: disc;
-  margin: 24px auto 0 auto;
-}
-.explain-box-top  ul li {
-  font-style: "Noto Serif JP";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: 1.0px;
-  margin: auto 8px 12px -8px;
-}
-/* サービスへの心構えの時のパターン */
-/* 企業理念の時のパターン */
-.explain-box-2-top {
-  width: 272px;
-  height: 260px;
-}
-.explain-box-2-top ul {
-  list-style-type: none;
-  margin: 32px auto 0 auto;
-}
-.explain-box-2-top  ul li {
-  font-style: "Noto Serif JP";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 32px;
-  letter-spacing: 1.6px;
-  margin: auto 8px 16px -8px;
-}
-/* モットーの時のパターン */
-.explain-box-3-top {
-  width: 272px;
-  height: 260px;
-}
-.explain-box-3-top ul {
-  list-style-type: none;
-  margin: 32px auto 0 auto;
-}
-.explain-box-3-top  ul li {
-  font-style: "Noto Serif JP";
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 28px;
-  letter-spacing: 1.6px;
-  margin: auto 8px 16px 16px;
-}
-/* 文字部分の上方への移動 */
-.box-text-top {
-  margin-top: -340px;
-}
-/*** ボタン部分 ***/
-.button-img-top {
-  width: 200px;
-  height: 40px;
-}
-.jamp-plate-top {
-  width: 100%;
-  height: 100%;
-}
-.jump-text-top p {
-  font-style: "Noto Sans JP";
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 28px;
-  letter-spacing: 1.28px;
-  color: #605601;
-}
-/* テキスト部の上への移動 */
-.jump-text-top {
-  margin-top: -48px;
-  margin-left: 48px;
-}
 
 /* -------------------------------------------- */
 /*  ▼ タブレット以上の場合に適用するCSS ▼
 /* -------------------------------------------- */
-@media (min-width: 600px) {
+/*@media (min-width: 600px) {*/
+@media (min-width: 768px) {
   .viewport-test{
     background: #9eff8d; /* 黄色 */
   }
@@ -703,195 +392,162 @@ main {
   /** ===================================== +*/
   /* ヘッダー全体の領域の定義 */
   header {
-    height: 184px;
+    display: block;
+    height: 200px;
+    width: 100%;
   }
 
   /* ヘッダーのトレードマークの定義 */
-  .LogoArea {
-    top: 40px;
-    left: 64px;
-    width: 320px;
-    height: 96px;
+  .trade-mark {
+    top: 64px;
+    left: 32px;
+    width: 280px;
+    height: 80px;
+/*    background-color: orange;*/
   }
   .LogoMark {
-    top: 0px;
-    left: 0px;
-    width: 96px;
-    height: 96px;
+    width: 80px;
+    height: 80px;
+/*    background-color: #62f56c;*/
   }
   .LogoMark img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .LogoText {
-    top: 21px;
-    left: 98px;
-    width: 336px;
-    height: 32px;
+    height: 24px;
+    margin-top: 47px;
+    padding-left: 0 0 0 8px;
+/*    background-color: #fe6464;*/
   }
   .LogoTextFig {
-    font-size: 32px;
-    line-height: 32px;
-    letter-spacing: 3.2px;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 2.4px;
+/*    color: #c9c9c9;*/
   }
 
   /* ヘッダーナビゲーション表示にする */
-  .HeaderMenuColumn {
+  .header-nav {
     display: block;
-    position: relative;
-    top: 36px;
-    height: 32px;
-    padding-top: 8px;
+    position: absolute;
+    top: 180px;
+    width: 100%;
+    height: 20px;
+/*    background-color: #fe9393;*/
+  }
+  .header-nav nav {
+    width: 630px;
     margin: 0 auto;
   }
-  .header-nav {
-    width: 600px;
-    height: 32px;
-    margin: auto;
+  .header-nav nav ul {
+    gap: 20px;
   }
-  /* ヘッダーナビゲーションを横並びにする */
-  .header-nav ul {
-    list-style-type: none; /* デフォルトのリストスタイルを削除 */
-    padding: 0; /* パディングをリセット */
-    margin: 0; /* マージンをリセット */
-    display: flex; /* フレックスボックスレイアウトを適用 */
-    justify-content: space-around; /* 要素間を均等に配置 */
-  }
-  .header-nav ul li {
-    margin: 0 10px; /* 各リスト項目の左右にマージンを追加 */
-  }
-  /* ナビゲーションのテキストスタイルとサイズを設定 */
-  .nav-h-text {
-    font-family: "Noto Sans HK";
+  .header-nav nav ul li {
     font-size: 16px;
-    font-weight: bold;
     line-height: 20px;
-    letter-spacing: 0.6px;
+    letter-spacing: 2.4px;
   }
-  /* ナビゲーションの文字装飾を指定する */
-  .header-nav ul li a {
-    text-decoration: none; /* リンクの下線を削除 */
-    /* color: #000; *//* リンクのカラーを黒に設定 */
-    padding: 5px 10px; /* パディングを追加してクリッカブルエリアを広げる */
+  .header-nav nav ul li a {
+    padding: 5px 10px;
   }
-  .header-nav ul li a:hover {
-    background-color: #f0f0f0; /* ホバー時に背景色を変更 */
+  .header-nav nav ul li a:hover {
+    color: #ecd525;
   }
+
+  /*** ハンバーガーメニュー ***/
+  /* 非表示にする */
+  .hamburger-menu {
+    display: none;
+  }
+
+
   /*+ until here about header ============= +*/
 
   /*+ ===================================== +*/
   /*+ footer部
   /** ===================================== +*/
-  .footer-indicate-area {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 184px 1fr 424px 1fr;
-    grid-template-rows: auto 16px auto 16px auto 16px;
-    margin-top: 56px;
+  /* フッターの構造 */
+  .footer {
   }
 
-  /* フッタータイトル文字 */
+  /* フッターのサイズ・文字色 */
   .footer-title {
-    height: 24px;
-    width: 100%;
-  }
-  .footer-tilte-letter {
     font-size: 22px;
     line-height: 24px;
     letter-spacing: 2.2px;
   }
-  /* フッターの内容説明 */
-  .footer-content {
-    margin-top: 16px;
-    margin-left: 40px
-  }
-  .footer-content-letter {
+  .footer-text {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.8px;
   }
 
-  .FooterMenuArea {
-    grid-column: 2;
-    grid-row: 1 / 6;
+  .footer-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 200px 1fr 368px 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 36px;
+    width: 100%;
+    margin: 56px auto 0;
+    padding: 0;
   }
 
-  .footer-address-area {
+  .footer-nav {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .footer-address {
     grid-column: 4;
     grid-row: 1;
   }
 
-  .footer-telmail-area {
+  .footer-telmail {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  .footer-business-hours {
     grid-column: 4;
     grid-row: 3;
   }
 
-  .footer-businesshours {
-    grid-column: 4;
-    grid-row: 5;
+  .footer-text {
+    margin-top: 16px;
+    margin-left: 40px;
   }
 
-  /*+ until here about footer ============= +*/
-
-  /*+ ===================================== +*/
-  /*+ main部
-  /** ===================================== +*/
-  /*+ ===================================== +*/
-  /*+ ビジュアルメイン部
-  /** ===================================== +*/
-
-  /* ビジュアルイメージのサイズと表示絶対座標 */
-  .vm-full {
-    position: absolute;
-    top: 184px;
-    width: 100%;
-    height: 496px;
-    display: block;
-    margin: 0; /* 余白を無くす */
-    padding: 0; /* 余白を無くす */
+  /* ナビゲーション */
+  .footer-nav nav {
+    margin-top: 32px;
+    margin-left: 40px;
   }
-
-  /* 主メッセージのフォント設定*/
-  .vm-main-message-fig {
-    font-size: 48px;
-    line-height: 52px;
-    letter-spacing: 4.8px;
+  .footer-nav nav ul {
   }
-
-  /* 副メッセージのフォント設定 */
-  .vm-sub-message-fig {
+  .footer-nav nav ul li {
+    margin-bottom: 32px;
     font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 2.0px;
+    line-height: 20px;
+    letter-spacing: 2.16px;
+  }
+  .footer-nav nav ul li a {
+    padding: 5px 10px;
+  }
+  .footer-nav nav ul li a:hover {
   }
 
-  /* 個別画面ごとの主メッセージのdivの設定 */
-  .main-vm-message-top {
-    width: 336px;
-    height: 52px;
-    top: 0px;
-    left: 0px;
+  /* コピーライト */
+  .footer-copyright {
+    height: 68px;
   }
 
-  /* 個別画面ごとの副メッセージのdivの設定 */
-  .sub-vm-message-top {
-    width: 200px;
-    height: 128px;
-    bottom: 0px;
-    margin-left: 87px;
-  }
-
-  /* 個別画面ごとのメッセージ・ボックスの設定 */
-  .vm-message-box-top {
-    width: 336px;
-    height: 216px;
-    margin: 0 auto;
-  }
-
-  /* 個別画面ごとのビジュアルメッセージのイメージ上への配置 */
-  .display-vm-message-top {
-    position: relative;
-    z-index: 51;
-    margin: 320px auto 0 auto;
+  .copyright-text {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 16px 16px 0;
   }
 
   /*+ until here about main-visual ======== +*/
@@ -900,115 +556,6 @@ main {
   /*+ 主記述部（top）
   /** ===================================== +*/
 
-  .main-description-top {
-    position: absolute;
-    top: 692px;
-    width: 100%;
-  }
-
-  .p-1-top {
-    width: 100%;
-    margin-left: 20px;
-    padding-right: 80px;
-  }
-
-  .p-2-top {
-    width: 100%;
-    margin-left: 40px;
-    padding-right: 80px;
-  }
-
-  /*** 会社の説明欄のレイアウトの設定 ***/
-  /*** タブレットから最下段は横並びに ***/
-  .layout-change-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  /* ダッシュの描画 */
-  .dash-1-top {
-    width : 200px;
-    height: 4px;
-    border-radius: 2px;
-    margin-top: 39px;
-    margin-left: 8px;
-    opacity: 0.6;
-  }
-
-/**/
-  /*** 説明ボックスの構成 ***/
-  /* 説明部の全体枠 */
-  .introduce-area-top {
-    height: 1088px;
-  }
-
-  /* ボックス群を収納する全体枠 */
-  .layout-change-top {
-    height: 456px;
-  }
-
-  /* １つの掲示枠 */
-  .frame-top {
-    width: 272px;
-    height: 416px;
-  }
-
-  /* 実際の１つの掲示の表示部分 */
-  .one-display-top {
-    width: 272px;
-    height: 416px;
-  }
-
-  /* 表示画の部分 */
-
-  /* ボタン部分の全体枠 */
-
-  /*** 説明ボックスの個々の部分の構成 ***/
-  /* 背景部分 */
-
-  /* 説明部の全体 */
-  /* タイトル文の部分 */
-  .title-box-top > p {
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 2.2px;
-    margin-top: 10px;
-  }
-  /* 説明文の部分 */
-  .explain-box-top ul {
-    list-style-type: disc;
-    margin: 24px auto 0 auto;
-  }
-  .explain-box-top  ul li {
-    font-size: 16px;
-    line-height: 28px;
-    margin: auto 8px 10px -8px;
-  }
-    /* 説明文の部分 */
-  .explain-box-2-top ul {
-    list-style-type: none;
-    margin: 40px auto 0 auto;
-  }
-  .explain-box-2-top  ul li {
-    font-size: 16px;
-    line-height: 28px;
-    margin: 18px 8px 10px -8px;
-  }
-  /* 説明文の部分 */
-  .explain-box-3-top ul {
-    list-style-type: none;
-    margin: 40px auto 0 auto;
-  }
-  .explain-box-3-top  ul li {
-    font-size: 16px;
-    line-height: 28px;
-    margin: 18px 8px 10px 24px;
-  }
-
-  /* 文字部分の上方への移動 */
-
-  /*** ボタン部分 ***/
 
 /* end media tablet phone */
 }
@@ -1016,9 +563,15 @@ main {
 /* -------------------------------------------- */
 /*  ▼PCの場合に適用するCSS ▼
 /* -------------------------------------------- */
+/*@media (min-width: 1024px) {*/
 @media (min-width: 1024px) {
   .viewport-test{
     background: #C8E3ED; /* 水色 */
+  }
+  /* 表示の最大サイズ */
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   /* ========================== */
@@ -1048,52 +601,74 @@ main {
   /** ===================================== +*?//
   /* ヘッダー全体の領域の定義 */
   header {
-    height: 184px;
+    display: block;
+    height: 240px;
+    width: 100%;
   }
 
   /* ヘッダーのトレードマークの定義 */
-  .LogoArea {
-    top: 48px;
-    left: 64px;
+  .trade-mark {
+    display: flex;
+    position: relative;
+    top: 96px;
+    left: 72px;
     width: 320px;
     height: 96px;
+/*    background-color: orange;*/
   }
   .LogoMark {
-    top: 0px;
-    left: 0px;
     width: 96px;
     height: 96px;
+    margin: 0;
+/*    background-color: #62f56c;*/
   }
   .LogoMark img {
-    width: 100%;
   }
   .LogoText {
-    top: 21px;
-    left: 98px;
-    width: 336px;
-    height: 32px;
+    height: 24px;
+    margin-top: 58px;
+    padding-left: 0 0 0 8px;
+/*    background-color: #fe6464;*/
   }
   .LogoTextFig {
-    font-size: 32px;
-    line-height: 32px;
-    letter-spacing: 3.2px;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 2.8px;
   }
 
-  /* ヘッダーナビゲーション表示を変更する */
-  .HeaderMenuColumn {
+  /* ヘッダーナビゲーション表示にする */
+  .header-nav {
     display: block;
-    position: relative;
-    top: 37px;
-    left: 400px;
-    height: 32px;
-    padding-top: 8px;
-    height: 32px;
-  /*  background-color:#C8E3ED;*/
+    position: absolute;
+    top: 224px;
+    width: 100%;
+    height: 20px;
+/*    background-color: #fe9393;*/
   }
-  .HeaderNavigation {
-    width: 600px;
-    padding: 0px auto;
-  /*  background-color:burlywood;*/
+  .header-nav nav {
+    width: 630px;
+    margin: 0 auto;
+  }
+  .header-nav nav ul {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+    gap: 20px;
+  }
+  .header-nav nav ul li {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 2.4px;
+  }
+  .header-nav nav ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  .header-nav nav ul li a:hover {
   }
 
   /*+ until here about header ============= +*/
@@ -1101,54 +676,90 @@ main {
   /*+ ===================================== +*/
   /*+ footer部
   /** ===================================== +*/
-  .footer-indicate-area {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 184px 1fr 368px 1fr 368px 1fr;
-    grid-template-rows: auto 16px auto 16px;
-    margin-top: 56px;
+  /* フッターの構造 */
+  .footer {
   }
 
-  /* フッタータイトル文字 */
+  /* フッターのサイズ・文字色 */
   .footer-title {
-    height: 28px;
-    width: 100%;
-  }
-  .footer-tilte-letter {
     font-size: 22px;
     line-height: 24px;
     letter-spacing: 2.2px;
   }
-  /* フッターの内容説明 */
-  .footer-content {
-    margin-top: 16px;
-    margin-left: 40px
-  }
-  .footer-content-letter {
+  .footer-text {
     font-size: 18px;
     line-height: 24px;
     letter-spacing: 1.8px;
   }
 
-  .FooterMenuArea {
-    grid-column: 2;
-    grid-row: 1 / 4;
+  /* フッター構造 */
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr 368px 1fr 368px 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 36px;
+    width: 100%;
+    margin: 64px auto 0;
+    padding: 0;
   }
 
-  .footer-address-area {
+  .footer-nav {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .footer-address {
     grid-column: 4;
     grid-row: 1;
   }
 
-  .footer-telmail-area {
+  .footer-telmail {
     grid-column: 4;
-    grid-row: 3;
+    grid-row: 2;
   }
 
-  .footer-businesshours {
+  .footer-business-hours {
     grid-column: 6;
-    grid-row: 1 / 4;
+    grid-row: 1 / 3;
   }
+
+  .footer-text {
+    margin-top: 16px;
+    margin-left: 40px;
+  }
+
+  /* ナビゲーション */
+  .footer-nav nav {
+    margin-top: 32px;
+    margin-left: 40px;
+  }
+  .footer-nav nav ul {
+  }
+  .footer-nav nav ul li {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2.16px;
+  }
+  .footer-nav nav ul li a {
+    padding: 5px 10px;
+  }
+  .footer-nav nav ul li a:hover {
+  }
+
+  /* コピーライト */
+  .footer-copyright {
+    width: 100%;
+    height: 68px;
+  }
+
+  .copyright-text {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0 16px 16px 0;
+  }
+
 
   /*+ until here about footer ============= +*/
 
@@ -1160,59 +771,6 @@ main {
   /** ===================================== +*/
 
   /* ビジュアルイメージのサイズと表示絶対座標 */
-  .vm-full {
-    position: absolute;
-    top: 200px;
-    width: 100%;
-    height: 864px;
-    display: block;
-    margin: 0; /* 余白を無くす */
-    padding: 0; /* 余白を無くす */
-  }
-
-  /* 主メッセージのフォント設定*/
-  .vm-main-message-fig {
-    font-size: 96px;
-    line-height: 96px;
-    letter-spacing: 9.6px;
-  }
-
-  /* 副メッセージのフォント設定 */
-  .vm-sub-message-fig {
-    font-size: 32px;
-    line-height: 72px;
-    letter-spacing: 3.2px;
-  }
-
-  /* 個別画面ごとの主メッセージのdivの設定 */
-  .main-vm-message-top {
-    width: 664px;
-    height: 96px;
-    top: 0px;
-    left: 0px;
-  }
-
-  /* 個別画面ごとの副メッセージのdivの設定 */
-  .sub-vm-message-top {
-    width: 288px;
-    height: 288px;
-    bottom: 0px;
-    margin-left: 194px;
-  }
-
-  /* 個別画面ごとのメッセージ・ボックスの設定 */
-  .vm-message-box-top {
-    width: 664px;
-    height: 232px;
-    margin: 0 auto;
-  }
-
-  /* 個別画面ごとのビジュアルメッセージのイメージ上への配置 */
-  .display-vm-message-top {
-    position: relative;
-    z-index: 51;
-    margin: 448px auto 0 auto;
-  }
 
   /*+ until here about main-visual ======== +*/
 
@@ -1220,206 +778,6 @@ main {
   /*+ 主記述部
   /** ===================================== +*/
 
-  .main-description-top {
-    position: absolute;
-    top: 1082px;
-    width: 100%;
-  }
-
-  .p-1-top {
-    width: 100%;
-    margin-left: 20px;
-    padding-right: 80px;
-  }
-
-  .p-2-top {
-    width: 100%;
-    margin-left: 40px;
-    padding-right: 80px;
-  }
-
-  /* ダッシュの描画 */
-  .dash-1-top {
-    width : 200px;
-    height: 4px;
-    border-radius: 2px;
-    margin-top: 46px;
-    margin-left: 8px;
-    opacity: 0.6;
-  }
-
-/**/
-
-  /* ダッシュの描画 */
-  .dash-1-top {
-    width : 200px;
-    height: 4px;
-    border-radius: 2px;
-    margin-top: 47px;
-    margin-left: 8px;
-    opacity: 0.6;
-  }
-
-/*+++++*/
-  /*** 説明ボックスの構成 ***/
-  /* 説明部の全体枠 */
-  .introduce-area-top {
-    height: 1112px;
-  }
-
-  /* ボックス群を収納する全体枠 */
-  .layout-change-top {
-    width: 100%;
-    height: 556px;
-    margin: 0 auto;
-/*    background-color: #96faff;*/
-  }
-
-  /* １つの掲示枠 */
-  .frame-top {
-    width: 300px;
-    height: 556px;
-    margin: 0 auto;
-/*    background-color: #7aff78;*/
-  }
-
-  /* 実際の１つの掲示の表示部分 */
-  .one-display-top {
-    width: 300px;
-    height: 520px;
-    margin: 0 auto;
-/*    background-color: #ececec;*/
-  }
-
-  /* 表示画の部分 */
-  .explane-box-top {
-    width: 300px;
-    height: 396px;
-    margin: 0 auto;
-    border: 0.5px;
-    border-style: solid;
-    border-color:rgba(0, 0, 0, 0.25);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-/*    background-color: #b181ff;*/
-  }
-
-  /* ボタン部分の全体枠 */
-  .jamp-box-top {
-    width: 300px;
-    height: 60px;
-    margin: 40px auto 0 auto;
-/*    background-color: #ffde8a;*/
-  }
-
-  /*** 説明ボックスの個々の部分の構成 ***/
-  /* 背景部分 */
-  .box-image-top {
-    width: 300px;
-    height: 340px;
-/*    background-color: #000000;*/
-  }
-  .graphic-top {
-    width: 300px;
-    height: 396px;
-  }
-  /* 説明部の全体 */
-  .box-top {
-    width: 300px;
-    height: 300px;
-  }
-  /* タイトル文の部分 */
-  .title-box-top {
-    width: 300px;
-    height: 96px;
-    border-bottom-width: 4px;
-    border-bottom-style: solid;
-    border-bottom-color: rgba(255, 115, 115, 0.50);
-  }
-  .title-box-top > p {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
-    letter-spacing: 2.4px;
-    width: 100%;
-    text-align: center;
-    margin-top: 16px;
-  }
-  /* 説明文の部分 */
-  .explain-box-top {
-    width: 300px;
-    height: 300px;
-  }
-  .explain-box-top ul {
-    list-style-type: disc;
-    margin: 24px auto 0 auto;
-  }
-  .explain-box-top  ul li {
-    font-style: "Noto Serif JP";
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 32px;
-    margin: auto 12px 0 0 4px;
-    padding-right: 8px;
-  }
-  .explain-box-2-top {
-    width: 300px;
-    height: 300px;
-  }
-  .explain-box-2-top ul {
-    list-style-type: none;
-    margin: 32px auto 0 8px;
-  }
-  .explain-box-2-top  ul li {
-    font-style: "Noto Serif JP";
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 40px;
-    margin: auto 18px 0 0 4px;
-    padding-right: 8px;
-  }
-  .explain-box-3-top {
-    width: 300px;
-    height: 300px;
-  }
-  .explain-box-3-top ul {
-    list-style-type: none;
-    margin: 32px auto 0 10px;
-  }
-  .explain-box-3-top  ul li {
-    font-style: "Noto Serif JP";
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 40px;
-    margin: auto 12px 0 0 4px;
-    padding-right: 8px;
-  }
-  /* 文字部分の上方への移動 */
-  .box-text-top {
-    margin-top: -340px;
-  }
-  /*** ボタン部分 ***/
-  .button-img-top {
-    width: 240px;
-    height: 48px;
-    margin-left: 30px;
-  }
-  .jamp-plate-top {
-    width: 100%;
-    height: 100%;
-  }
-  .jump-text-top p {
-    font-style: "Noto Sans JP";
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 28px;
-    letter-spacing: 1.28px;
-    color: #605601;
-  }
-  /* テキスト部の上への移動 */
-  .jump-text-top {
-    margin-top: -69px;
-    margin-left: 86px;
-  }
 
 /* end media pc phone */
 }
