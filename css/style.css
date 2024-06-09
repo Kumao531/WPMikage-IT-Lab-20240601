@@ -338,6 +338,46 @@ header {
 /*+ ===================================== +*/
 /*+ ビジュアルメイン部
 /** ===================================== +*/
+/* ビジュアルメイン画像 */
+.main-visual {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.main-visula-fig {
+  margin: 0;
+  width: 100%;
+  height: 248px;
+}
+
+.main-visula-fig img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* タイトル文字 */
+.main-visual-title-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.main-visual-title span {
+  font-family: "Noto Sans JP";
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.main-visula-narration {
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
 
 /*+ until here about main-visual ======== +*/
 
@@ -349,6 +389,27 @@ header {
 /*+ ===================================== +*/
 /*+ 主記述部（top）
 /** ===================================== +*/
+
+/*+ ===================================== +*/
+/*+ 主記述部（company）
+/** ===================================== +*/
+
+/* ビジュアルメイン */
+.main-visual-title-area {
+  margin: -232px auto 0;
+  row-gap: 4px;
+}
+
+.main-visual-title-figure-company span {
+  letter-spacing: 9px;
+  color: #DD3500;
+}
+
+.main-visula-narration-company {
+  line-height: 28px;
+  letter-spacing: 1.6px;
+  color: #7A2972;
+}
 
 
 /* -------------------------------------------- */
@@ -442,6 +503,10 @@ header {
     margin: 0 auto;
   }
   .header-nav nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     gap: 20px;
   }
   .header-nav nav ul li {
@@ -450,6 +515,9 @@ header {
     letter-spacing: 2.4px;
   }
   .header-nav nav ul li a {
+    text-decoration: none;
+    color: #7241FE;
+    display: block;
     padding: 5px 10px;
   }
   .header-nav nav ul li a:hover {
@@ -553,9 +621,59 @@ header {
   /*+ until here about main-visual ======== +*/
 
   /*+ ===================================== +*/
+  /*+ main部
+  /** ===================================== +*/
+  /*+ ===================================== +*/
+  /*+ ビジュアルメイン部
+  /** ===================================== +*/
+  /* ビジュアルメイン画像 */
+  .main-visual {
+  }
+
+  .main-visula-fig {
+    height: 496px;
+  }
+
+  .main-visula-fig img {
+  }
+
+  /* タイトル文字 */
+  .main-visual-title-area {
+  }
+
+  .main-visual-title span {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .main-visula-narration {
+    font-size: 20px;
+  }
+
+  /*+ until here about main-visual ======== +*/
+
+  /*+ ===================================== +*/
   /*+ 主記述部（top）
   /** ===================================== +*/
 
+  /*+ ===================================== +*/
+  /*+ 主記述部（company）
+  /** ===================================== +*/
+
+  /* ビジュアルメイン */
+  .main-visual-title-area {
+    margin: -384px auto 0;
+    row-gap: 4px;
+  }
+
+  .main-visual-title-figure-company span {
+    letter-spacing: 12px;
+  }
+
+  .main-visula-narration-company {
+    line-height: 40px;
+    letter-spacing: 2.0px;
+  }
 
 /* end media tablet phone */
 }
@@ -769,15 +887,54 @@ header {
   /*+ ===================================== +*/
   /*+ ビジュアルメイン部
   /** ===================================== +*/
+  /* ビジュアルメイン画像 */
+  .main-visual {
+  }
 
-  /* ビジュアルイメージのサイズと表示絶対座標 */
+  .main-visula-fig {
+    height: 864px;
+  }
+
+  .main-visula-fig img {
+  }
+
+  /* タイトル文字 */
+  .main-visual-title-area {
+  }
+
+  .main-visual-title span {
+    font-size: 96px;
+    line-height: 96px;
+  }
+
+  .main-visula-narration {
+    font-size: 32px;
+  }
 
   /*+ until here about main-visual ======== +*/
 
   /*+ ===================================== +*/
-  /*+ 主記述部
+  /*+ 主記述部（top）
   /** ===================================== +*/
 
+  /*+ ===================================== +*/
+  /*+ 主記述部（company）
+  /** ===================================== +*/
+
+  /* ビジュアルメイン */
+  .main-visual-title-area {
+    margin: -648px auto 0;
+    row-gap: 20px;
+  }
+
+  .main-visual-title-figure-company span {
+    letter-spacing: 24.0px;
+  }
+
+  .main-visula-narration-company {
+    line-height: 88px;
+    letter-spacing: 3.2px;
+  }
 
 /* end media pc phone */
 }
