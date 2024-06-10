@@ -1,4 +1,5 @@
 .viewport-test {
+  display: none;
   height: 20px;
   width: 100%;
   background-color: #ffffab;
@@ -149,7 +150,7 @@ h3 {
 /*+ body部
 /** ===================================== +*/
 body {
-
+  background-color: #f8f5ff;
 }
 
 /*+ ===================================== +*/
@@ -406,8 +407,7 @@ header {
 .main-description {
   width: 100%;
   margin: 0 auto;
-  padding: 16px 8px 0 16px;
-/*  background-color: #afffd8;*/
+  padding: 16px 8px 0 0;
 }
 
 
@@ -913,6 +913,168 @@ header {
   padding-right: 32px;
   text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
 }
+
+/*+ ===================================== +*/
+/*+ 主記述部（aboutus）
+/** ===================================== +*/
+/*+++ ビジュアルメイン +++*/
+.main-visual-title-figure-aboutus span {
+  letter-spacing: 4.8px;
+  color: #e8e8e8;
+}
+
+.main-visula-narration-aboutus {
+  line-height: 40px;
+  letter-spacing: 2.4px;
+  margin-top: 3px;
+  text-align: left;
+  color: #e8e8e8;
+}
+
+/*+++ 主記述部 +++*/
+/* 全体の構造 */
+.leading-aboutus h3 {
+  width: 100%;
+  padding: 0 0 16px 0;
+}
+.leading-aboutus p {
+  width: 100%;
+  padding: 0 0 32px 0;
+}
+
+.refarence-aboutus {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat( 5, auto );
+  grid-row-gap: 62px;
+  width: 100%;
+  margin:0 auto 32px auto;
+}
+
+.company-aboutus {
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  margin: 0 auto;
+/*  background-color: #f7ff8b;*/
+}
+
+.office-aboutus {
+  display: block;
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+  margin: 0 auto;
+/*  background-color: #f7ff8b;*/
+}
+
+.devenv-aboutus {
+  display: block;
+  grid-column: 1;
+  grid-row: 3;
+  width: 100%;
+  margin: 0 auto;
+/*  background-color: #f7ff8b;*/
+}
+
+.profile-aboutus {
+  display: block;
+  grid-column: 1;
+  grid-row: 4;
+  width: 100%;
+  margin: 0 auto;
+/*  background-color: #f7ff8b;*/
+}
+
+.motto-aboutus {
+  display: block;
+  grid-column: 1;
+  grid-row: 5;
+  width: 100%;
+  margin: 0 auto;
+/*  background-color: #f7ff8b;*/
+}
+
+.ref-fig-aboutus {
+  width: 300px;
+  height: 48px;
+  border: 1px solid rgba( 20, 20, 20, 0.15 );
+  filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
+  margin: 0 auto;
+}
+.ref-fig-aboutus a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ref-fig-aboutus p {
+  font-family: "Noto Sans JP";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 2.4px;
+  color: #282727;
+  margin-top: -41px;
+  margin-left: 16px;
+}
+
+.rademake-part-abotus h3 {
+  width: 100%;
+}
+
+.leading-aboutus p {
+  padding: 0 16px;
+  margin-bottom: 32px;
+}
+
+.trademake-part-abotus {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.trademark-exp-aboutus {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 32px auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.trademark-aboutus {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  margin: 0 auto;
+/*  background-color: #81fd9c;*/
+}
+
+.caption-aboutus {
+  grid-column: 1;
+  grid-row: 3;
+  width: 100%;
+  margin: 0 auto;
+/*  background-color: #81fd9c;*/
+}
+.caption-aboutus p {
+  padding: 0 32px;
+}
+
+.trademark-aboutus div {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border: 1px solid rgba( 20, 20, 20, 0.15 );
+  filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
+}
+.trademark-aboutus div img {
+  width: 100%;
+  height: 100;
+  object-fit: cover;
+}
+
 
 /*  ▼ タブレット以上の場合に適用するCSS ▼
 /* -------------------------------------------- */
@@ -1526,6 +1688,96 @@ header {
     padding-right: 32px;
   }
 
+  /*+ ===================================== +*/
+  /*+ 主記述部（aboutus）
+  /** ===================================== +*/
+
+  /*+++ ビジュアルメイン +++*/
+  .main-visual-title-area-aboutus {
+  }
+
+  .main-visual-title-figure-aboutus span {
+  }
+
+  .main-visula-narration-aboutus {
+  }
+
+  /*+++ 主記述部 +++*/
+  /* 全体の構造 */
+  .refarence-aboutus {
+    display: grid;
+    grid-template-columns: 1fr 4fr 8fr;
+    grid-template-rows: repeat( 5, auto );
+    grid-row-gap: 62px;
+    width: 100%;
+    margin:0 auto 48px auto;
+  }
+
+  .company-aboutus {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .office-aboutus {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .devenv-aboutus {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .profile-aboutus {
+    grid-column: 2;
+    grid-row: 4;
+  }
+
+  .motto-aboutus {
+    grid-column: 2;
+    grid-row: 5;
+  }
+
+  .trademake-part-abotus h3 {
+    margin-bottom: 40px;
+  }
+
+  .trademark-exp-aboutus {
+    display: grid;
+    grid-template-columns: 24px 240px 1fr;
+    grid-template-rows: 200px 36px auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .trademark-aboutus {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0 auto 40px;
+    padding-top: 10px;
+  }
+
+  .caption-aboutus {
+    grid-column: 2 / 4;
+    grid-row: 3;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .caption-aboutus p {
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  .trademark-aboutus div {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .trademark-aboutus div img {
+  }
+
 /* end media tablet phone */
 }
 
@@ -1539,7 +1791,7 @@ header {
   }
   /* 表示の最大サイズ */
   body {
-    max-width: 1440px;
+    max-width: 2000px;
     margin: 0 auto;
   }
 
@@ -1860,6 +2112,92 @@ header {
     grid-row-gap: 80px;
     width: 100%;
     margin: 64px auto;
+  }
+
+  /*+ ===================================== +*/
+  /*+ 主記述部（aboutus）
+  /** ===================================== +*/
+
+  /*+++ ビジュアルメイン +++*/
+  .main-visual-title-area-aboutus {
+  }
+
+  .main-visual-title-figure-aboutus span {
+  }
+
+  .main-visula-narration-aboutus {
+  }
+
+  /*+++ 主記述部 +++*/
+  /* 全体の構造 */
+  .refarence-aboutus {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
+    grid-template-rows: repeat( 3, auto );
+    grid-row-gap: 62px;
+    width: 100%;
+    margin:0 auto 32px auto;
+  }
+
+  .company-aboutus {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .office-aboutus {
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  .devenv-aboutus {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .profile-aboutus {
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  .motto-aboutus {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+    .trademark-exp-aboutus {
+    display: grid;
+    grid-template-columns: 40px 200px 32px 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .trademark-aboutus {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0 auto 40px;
+    padding-top: 10px;
+  }
+
+  .caption-aboutus {
+    grid-column: 4;
+    grid-row: 1;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .caption-aboutus p {
+    margin: 0;
+    padding-left: 16px;
+  }
+
+  .trademark-aboutus div {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .trademark-aboutus div img {
   }
 
 /* end media pc phone */
