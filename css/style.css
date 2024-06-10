@@ -351,12 +351,14 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  background-color: #ff9e9e;
 }
 
 .main-visula-fig {
   margin: 0;
   width: 100%;
   height: 400px;
+  background-color: #d3ff41;
 }
 
 .main-visula-fig img {
@@ -369,8 +371,8 @@ header {
 .main-visual-title-panel {
   display: block;
   width: 100%;
-  height: 400px;
-  margin: -400px auto 0;
+  height: 328px;
+  margin: -384px auto 0;
 /*  background-color: #7A2972;*/
 }
 
@@ -643,7 +645,6 @@ header {
   margin-bottom: 32px;
 }
 
-/*+++ ビジュアルメイン +++*/
 /*+ ===================================== +*/
 /*+ 主記述部（company）
 /** ===================================== +*/
@@ -774,7 +775,145 @@ header {
   padding-left: 24px;
 }
 
-/* -------------------------------------------- */
+/*+ ===================================== +*/
+/*+ 主記述部（service）
+/** ===================================== +*/
+
+/*+++ ビジュアルメイン +++*/
+.main-visual-title-area-cservice {
+  padding-top: 8px;;
+  row-gap: 4px;
+}
+
+.main-visual-title-figure-service span {
+  letter-spacing: 9px;
+  color: #e88665;
+  text-shadow: 3px 3px 4px rgba( 255, 255, 255, 0.70);
+}
+
+.main-visula-narration-service {
+  line-height: 40px;
+  letter-spacing: 1.6px;
+  color: #e88665;
+  text-shadow: 2px 2px 3px rgba( 255, 255, 255, 0.85);
+}
+
+/*+++ 主記述部 +++*/
+/* 全体の構造 */
+.abstract-service {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.display-bord-service {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 80px;
+  width: 100%;
+  margin: 64px auto;
+/*  background-color: #ff9a9a;*/
+}
+
+.web-service {
+  display: block;
+  grid-column: 1;
+  grid-row: 1;
+/*  background-color: hsl(60, 100%, 82%);*/
+}
+
+.si-service {
+  display: block;
+  grid-column: 1;
+  grid-row: 2;
+/*  background-color: hsl(60, 100%, 82%);*/
+}
+
+.pm-service {
+  display: block;
+  grid-column: 1;
+  grid-row: 3;
+/*  background-color: hsl(60, 100%, 82%);*/
+}
+
+.consul-service {
+  display: block;
+  grid-column: 1;
+  grid-row: 4;
+/*  background-color: hsl(60, 100%, 82%);*/
+}
+
+.plate-service {
+  display: block;
+  width: 450px;
+  height: 250px;
+  margin: 0 auto;
+}
+.plate-service img {
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: drop-shadow( 2px, 2px, 4px, 4px, rgba( 0, 0, 0, 0.40));
+}
+
+.web-service p {
+  z-index: 52;
+  font-family: "Noto Sans JP";
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 34px;
+  letter-spacing: 3.4px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: -150px;
+  padding-right: 32px;
+  text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
+}
+
+.si-service p {
+  z-index: 52;
+  font-family: "Noto Sans JP";
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 34px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: -150px;
+  padding-right: 32px;
+  text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
+}
+
+.pm-service p {
+  z-index: 52;
+  font-family: "Noto Sans JP";
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: -180px;
+  padding-right: 32px;
+  text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
+}
+
+.consul-service p {
+  z-index: 52;
+  font-family: "Noto Sans JP";
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: 3.6px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: -180px;
+  padding-right: 32px;
+  text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
+}
+
 /*  ▼ タブレット以上の場合に適用するCSS ▼
 /* -------------------------------------------- */
 /*@media (min-width: 600px) {*/
@@ -1294,6 +1433,99 @@ header {
     padding-left: 24px;
   }
 
+  /*+ ===================================== +*/
+  /*+ 主記述部（service）
+  /** ===================================== +*/
+
+  /*+++ ビジュアルメイン +++*/
+  .main-visual-title-area-cservice {
+  }
+
+  .main-visual-title-figure-service span {
+  }
+
+  .main-visula-narration-service {
+  }
+
+  /*+++ 主記述部 +++*/
+  /* 全体の構造 */
+  .abstract-service {
+  }
+
+  .display-bord-service {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 60px;
+    width: 100%;
+    margin: 64px auto;
+  }
+
+  .web-service {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .si-service {
+    display: block;
+    grid-column: 4;
+    grid-row: 1;
+  }
+
+  .pm-service {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .consul-service {
+    display: block;
+    grid-column: 4;
+    grid-row: 2;
+  }
+
+  .plate-service {
+    display: block;
+    width: 320px;
+    height: 200px;
+    margin: 0 auto;
+  }
+  .plate-service img {
+  }
+
+  .web-service p {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 2.6px;
+    margin-top: -126px;
+    padding-right: 32px;
+  }
+
+  .si-service p {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 2.6px;
+    margin-top: -126px;
+    padding-right: 32px;
+  }
+
+  .pm-service p {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: 3.6px;
+    margin-top: -144px;
+    padding-right: 32px;
+  }
+
+  .consul-service p {
+    font-size: 26px;
+    line-height: 34px;
+    letter-spacing: 2.6px;
+    margin-top: -144px;
+    padding-right: 32px;
+  }
+
 /* end media tablet phone */
 }
 
@@ -1615,6 +1847,19 @@ header {
   .main-visula-narration-company {
     line-height: 64px;
     letter-spacing: 3.2px;
+  }
+
+  /*+ ===================================== +*/
+  /*+ 主記述部（service）
+  /** ===================================== +*/
+
+  .display-bord-service {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 80px;
+    width: 100%;
+    margin: 64px auto;
   }
 
 /* end media pc phone */
