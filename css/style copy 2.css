@@ -11,7 +11,6 @@
 
 body {
   display: block;
-  width: 100%;
   margin: 0  auto;
 }
 
@@ -48,6 +47,13 @@ footer {
   margin: auto;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+hr {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 /* ========================== */
@@ -111,27 +117,27 @@ header, footer {
 
 h2 {
   font-family: "Noto Sans JP";
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 32px;
   letter-spacing: 2.6px;
   color: #181818;
 }
 
 h3 {
   font-family: "Noto Sans JP";
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 32px;
   letter-spacing: 2.4px;
   color: #181818;
 }
 
 .regtext {
   font-family: "Noto Serif JP";
-  font-size: 18px;
+  font-size: 24px;
   font-weight: normal;
-  line-height: 32px;
+  line-height: 40px;
   letter-spacing: 2.4px;
   color: #181818;
 }
@@ -237,12 +243,10 @@ header {
 .hamburger-menu {
   display: block;
   position: fixed;
-  z-index: 99;
-  top: 8px;
+  top: 16px;
   right: 8px;
-  width: 56px;
-  height: 56px;
-  opacity: 0.75;
+  width: 72px;
+  height: 72px;
 }
 .hamburger-menu img {
   width: 100%;
@@ -284,12 +288,12 @@ header {
 .footer-grid {
   display: grid;
 
-  grid-template-columns: 1fr 328px 1fr;
+  grid-template-columns: 1fr 360px 1fr;
   grid-template-rows: auto auto auto auto;
   row-gap: 32px;
   width: 100%;
   margin: 32px auto 0;
-  padding: 0 16px;
+  padding: 32px 24px 0 24px;
 }
 
 .footer-nav {
@@ -412,15 +416,15 @@ header {
 
 .main-visual-title span {
   font-family: "Noto Sans JP";
-  font-size: 40px;
+  font-size: 48px;
   font-weight: bold;
-  line-height: 40px;
+  line-height: 48px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 .main-visula-narration {
   font-family: "Noto Serif JP";
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -431,13 +435,12 @@ header {
 /*+ main =============================== +*/
 main {
   width: 100%;
-  margin: 0 auto;
 }
 
 .main-description {
   width: 100%;
   margin: 0 auto;
-  padding: 16px 24px 0;
+  padding: 16px 16px 0;
 }
 
 
@@ -471,28 +474,10 @@ main {
 
 /*+++ 主記述部 +++*/
 /* 全体の構造 */
-/*
-.main-description {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-}
-.main-visual {
-  grid-column: 1;
-  grid-row: 1;
-}
-.main-description-index {
-  grid-column: 1;
-  grid-row: 2;
-}
-*/
-
 .declaration-index {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 72px auto auto 72px auto auto;
-  width: 100%;
-  margin: 0 auto;
 }
 
 .title-1-index {
@@ -532,42 +517,40 @@ main {
 }
 
 /* 個別の構造 */
-.intro-index {
-  padding-bottom: 16px;
-}
-
 .title-area-index {
   display: flex;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
   width: 100%;
-  height: 80px;
-  padding-bottom:54px;
+  height: 72px;
   margin: 0 auto;
 }
 .title-index {
   display: block;
+  height: 24px;
   width: auto;
-  margin-right: 8px;
+  margin-top: 0;
 }
 .title-index h3 {
   width: auto;
   text-align: left;
   margin: 0;
 }
-.line-index {
-  height: 4px;
-  border-radius: 2px;
-  width: 300px;
-  background-color: #221EEB;
+.dash-index {
+  display: block;
+  height: 24px;
+  width: auto;
+  margin: 0px;
+  padding-left: 12px;
+}
+.dash-index img {
+  width: 100%;
+  padding-top: 12px;
 }
 
 /* 各々の掲示 */
 .figure-index {
   display: block;
-  width: 300px;
-  height: 600px;
+  width: 400px;
+  height: 632px;
   margin: 0 auto;
 /*  background-color: #efff86;*/
 }
@@ -575,25 +558,21 @@ main {
 .caption-index {
   display: block;
   width: 100%;
-  height: 88px;
-  padding: 8px 0;
+  height: 96px;
   margin: 0 auto;
 /*  background-color: #b5ffb5;*/
 }
 .caption-index p {
   font-family: "Noto Serif JP";
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing:2.4px;
+  line-height: 34px;
+  letter-spacing:2.6px;
   text-align: center;
-  padding: 0;
-  margin: 0 auto;
+  padding-top: 10px;
 }
 .hr-index {
-  display: block;
   margin: 0;
-  padding: 0;
   width: 100%;
   height: 4px;
   opacity: 0.5;
@@ -612,22 +591,22 @@ main {
 /*  background-color: #cda4ff; */
 }
 .describe-index ul {
-  margin: 0 12px;
+  margin: 0 24px;
   padding-top: 40px;
   height: 360px;
 /*  background-color: #9cfbc0;*/
 }
 .describe-index ul li {
   font-family: "Noto Serif Jp";
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 32px;
   margin-bottom: 16px;
 }
 
 .figure-plate-index {
   width: 100%;
-  height: 436px;
+  height: 464px;
   margin: 0;
   box-shadow: 3px 3px 6px rgba( 0, 0, 0, 0.4 );
 }
@@ -637,7 +616,7 @@ main {
   object-fit: cover;
 }
 .textplate-index {
-  margin-top: -436px;
+  margin-top: -464px;
 }
 
 .figure-index a {
@@ -661,14 +640,14 @@ main {
 .jamp-message-index {
   width: 100%;
   padding-left: 48px;
-  margin-top: -60px;
+  margin-top: -64px;
 }
 .jamp-message-index p {
   font-family: "Noto Sans JP";
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
-  line-height: 18px;
-  letter-spacing: 1.8px;
+  line-height: 22px;
+  letter-spacing: 2.2px;
   color: #605601;
   width: 100%;
   text-align: center;
@@ -687,7 +666,7 @@ main {
   list-style-type: cjk-decimal;
 }
 .principal-describe-index ul li {
-  margin-left: 12px;
+  margin-left: 32px;
   margin-top: 24px;
 }
 
@@ -712,7 +691,7 @@ main {
   margin-left: 16px;
 }
 .motto-describe-index ul li {
-  margin-left: 20px;
+  margin-left: 40px;
   padding-bottom: 10px;
 }
 
@@ -739,14 +718,10 @@ main {
 
 /*+++ 主記述部 +++*/
 /* 全体の構造 */
-.main-description-company {
-  margin-top: 24px;
-}
-
 .flexbox-right-company {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 48px 176px auto 48px;
+  grid-template-rows: 48px 136px auto 48px;
   grid-template-areas:
       "TitleBox-comp"
       "FigBox-comp"
@@ -759,7 +734,7 @@ main {
 .flexbox-left-company {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 48px 176px auto 48px;
+  grid-template-rows: 48px 136px auto 48px;
   grid-template-areas:
       "TitleBox-comp"
       "FigBox-comp"
@@ -769,16 +744,23 @@ main {
 }
 
 .title-area-company {
-  display: flex;
+  display: block;
+  position: relative;
   grid-area: TitleBox-comp;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
   width: 100%;
-  height: 24px;
-  margin: 0 auto 24px;
+  height: 48px;
 /*  background-color: #73ffa2;*/
 }
+..title-area-company::after {
+  content:"";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-top: 2px dashed black;
+}
+
 
 .text-area-company {
   display: block;
@@ -791,8 +773,8 @@ main {
 .figure-area-company {
   display: block;
   grid-area: FigBox-comp;
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto auto auto;
   object-fit: cover;
 /*  background-color: #a670f2;*/
@@ -812,22 +794,32 @@ main {
 /* 個別の構造 */
 .title-comp {
   display: block;
+  height: 48px;
   width: auto;
-  margin-right: 8px;
+  margin-top: 0px;
 }
 .h3-comp {
-/*  height: 24px;*/
+  height: 48px;
   width: auto;
-  text-align: left;
   margin: 0;
 }
-.line-comp {
-  height: 4px;
-  border-radius: 2px;
-  width: 300px;
-  background-color: #221EEB;
+.h3-comp::after {
+  content:"";
+  width: 100%;
+  height: 1px;
+  border-top: 2px dashed black;
 }
 
+.dash-comp {
+  display: block;
+  height: 32px;
+  width: auto;
+  margin: 0;
+}
+.dash-comp img {
+  width: 100%;
+  padding: 16px 0 0 10px;
+}
 
 .return-top-company {
   display: flex;
@@ -857,8 +849,8 @@ main {
 /** ===================================== +*/
 
 /*+++ ビジュアルメイン +++*/
-.main-visual-title-area-service {
-  padding-top: 32px;;
+.main-visual-title-area-cservice {
+  padding-top: 8px;;
   row-gap: 4px;
 }
 
@@ -923,8 +915,8 @@ main {
 
 .plate-service {
   display: block;
-  width: 300px;
-  height: 185px;
+  width: 450px;
+  height: 250px;
   margin: 0 auto;
 }
 .plate-service img {
@@ -938,13 +930,13 @@ main {
 .web-service p {
   z-index: 52;
   font-family: "Noto Sans JP";
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 900;
-  line-height: 24px;
-  letter-spacing: 2.4px;
+  line-height: 34px;
+  letter-spacing: 3.4px;
   text-align: center;
   color: #ffffff;
-  margin-top: -112px;
+  margin-top: -150px;
   padding-right: 32px;
   text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
 }
@@ -952,13 +944,13 @@ main {
 .si-service p {
   z-index: 52;
   font-family: "Noto Sans JP";
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 900;
-  line-height: 24px;
-  letter-spacing: 2.4px;
+  line-height: 34px;
+  letter-spacing: 3.6px;
   text-align: center;
   color: #ffffff;
-  margin-top: -112px;
+  margin-top: -150px;
   padding-right: 32px;
   text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
 }
@@ -966,28 +958,28 @@ main {
 .pm-service p {
   z-index: 52;
   font-family: "Noto Sans JP";
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 900;
-  line-height: 36px;
-  letter-spacing: 2.4px;
+  line-height: 48px;
+  letter-spacing: 3.6px;
   text-align: center;
   color: #ffffff;
-  margin-top: -138px;
-  margin-left: -24px;
+  margin-top: -180px;
+  padding-right: 32px;
   text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
 }
 
 .consul-service p {
   z-index: 52;
   font-family: "Noto Sans JP";
-  font-size: 24px;
+  font-size: 34px;
   font-weight: 900;
-  line-height: 36px;
-  letter-spacing: 2.4px;
+  line-height: 48px;
+  letter-spacing: 3.6px;
   text-align: center;
   color: #ffffff;
-  margin-top: -138px;
-  margin-left: -24px;
+  margin-top: -180px;
+  padding-right: 32px;
   text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
 }
 
@@ -995,12 +987,6 @@ main {
 /*+ 主記述部（aboutus）
 /** ===================================== +*/
 /*+++ ビジュアルメイン +++*/
-/*+++ ビジュアルメイン +++*/
-.main-visual-title-area-aboutus {
-  padding-top: 32px;;
-  row-gap: 4px;
-}
-
 .main-visual-title-figure-aboutus span {
   letter-spacing: 4.8px;
   color: #e8e8e8;
@@ -1121,7 +1107,7 @@ main {
 .trademark-exp-aboutus {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 24px auto;
+  grid-template-rows: auto 32px auto;
   width: 100%;
   margin: 0 auto;
 }
@@ -1142,21 +1128,20 @@ main {
 /*  background-color: #81fd9c;*/
 }
 .caption-aboutus p {
-  padding: 0 8px;
+  padding: 0 32px;
 }
 
 .trademark-aboutus div {
-  width: 160px;
-  height: 160px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
+  border: 1px solid rgba( 20, 20, 20, 0.15 );
+  filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
 }
 .trademark-aboutus div img {
-  z-index: 2;
   width: 100%;
   height: 100;
   object-fit: cover;
-  border: 1px solid rgba( 20, 20, 20, 0.15 );
-  filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
 }
 
 /*  ▼ タブレット以上の場合に適用するCSS ▼
@@ -1413,7 +1398,7 @@ main {
   }
 
   .main-visula-narration-index {
-    line-height: 32px;
+    line-height: 36px;
     letter-spacing: 2.0px;
   }
 
@@ -1462,6 +1447,10 @@ main {
   .title-index {
   }
   .title-index h3 {
+  }
+  .dash-index {
+  }
+  .dash-index img {
   }
 
   /* 各々の掲示 */
@@ -1535,8 +1524,8 @@ main {
     padding-top: 24px;
   }
   .principal-describe-index ul {
-    margin-left: 16px;
-    margin-right: 4px;
+    margin-left: -6px;
+    margin-right: -2px;
   }
   .principal-describe-index ul li {
     margin-bottom: 32px;
@@ -1607,13 +1596,17 @@ main {
   }
 
   .title-area-company {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    grid-area: TitleBox-comp;
     height: 72px;
+    width: 100%;
 /*    background-color: #73ffa2;*/
   }
 
   .title-comp {
-  }
-  .h3-comp {
+    width: auto;
   }
 
   .text-area-company {
@@ -1643,7 +1636,19 @@ main {
   }
 
   /* 個別の構造 */
-  .title-index {
+  .h3-comp {
+    height: 48px;
+    margin: 0;
+  }
+
+  .dash-comp {
+    display: block;
+    height: 72px;
+    margin: 0;
+    margin-top: 0px;
+  }
+  .dash-comp img {
+    padding: 12px 0 0 8px;
   }
 
   .return-top-company {
@@ -1735,7 +1740,7 @@ main {
     line-height: 30px;
     letter-spacing: 2.6px;
     margin-top: -126px;
-    padding-right: 36px;
+    padding-right: 32px;
   }
 
   .si-service p {
@@ -1751,7 +1756,7 @@ main {
     line-height: 34px;
     letter-spacing: 3.6px;
     margin-top: -144px;
-    margin-left: -32px;
+    padding-right: 32px;
   }
 
   .consul-service p {
@@ -1759,7 +1764,7 @@ main {
     line-height: 34px;
     letter-spacing: 2.6px;
     margin-top: -144px;
-    margin-left: -32px;
+    padding-right: 32px;
   }
 
   /*+ ===================================== +*/
