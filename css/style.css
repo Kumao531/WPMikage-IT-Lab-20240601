@@ -228,25 +228,106 @@ header {
   color: #c9c9c9;
 }
 
-/*** ヘッダーナビゲーションを非表示にする ***/
+/******************************/
+/* スマフォ用ナビゲーション画面
+/******************************/
+/*** PC用メニュー ***/
 .header-nav {
   display: none;
 }
 
-/*** ハンバーガーメニュー ***/
+/*** スマフォ用メニュー ***/
+/*** ハンバーガーボタン ***/
 .hamburger-menu {
   display: block;
   position: fixed;
-  z-index: 99;
-  top: 8px;
+  top: 0;
+  left: 0;
+}
+.hamburger-menu .menu-toggle {
+  display: block;
+  position: fixed;
+  top: 20px;
   right: 8px;
   width: 56px;
   height: 56px;
   opacity: 0.75;
 }
-.hamburger-menu img {
+.hamburger-menu .menu-toggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*** メニュー画面 ***/
+.hamburger-menu .menu  {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+/*  background-color: #caf84e;*/
+  background-color: #181818;
+  overflow: nowrap;
+}
+.hamburger-menu .menu.show {
+  display: block;
+}
+/*** 閉じるボタン ***/
+.hamburger-menu .menu .close-button {
+  display: block;
+  position: fixed;
+  top: 20px;
+  right: 8px;
+  width: 56px;
+  height: 56px;
+  opacity: 1.00;
+}
+.hamburger-menu .menu .close-button img {
+  height: 100%;
   width: 100%;
   object-fit: cover;
+}
+/*** ナビゲーション ***/
+.hamburger-menu .menu .header-nav-sp {
+  display: block;
+  position: relative;
+  width: 180px;
+  top: 100px;
+  margin: 0 auto;
+/*  background-color: #3df29e;*/
+}
+.header-nav-sp h3 {
+  font-style: "Noto Sans JP";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 2.4px;
+  color: #E7E6F3;
+  text-align: left;
+}
+.header-nav-sp nav {
+  padding: 0;
+  margin: 40px 0 0 20px;
+}
+.header-nav-sp nav ul {
+  list-style-type: none;
+}
+.header-nav-sp nav ul li {
+  font-style: "Noto Sans JP";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 1.8px;
+  margin-left: -24px;
+  margin-bottom: 24px;
+}
+.header-nav-sp nav ul li a {
+  text-decoration: none;
+  color: #7241FE;
+  display: block;
+  padding: 5px 10px;
 }
 
 /*+ until here about header ============= +*/
@@ -922,7 +1003,7 @@ main {
 }
 
 .plate-service {
-  display: block;
+  z-index: 50;
   width: 300px;
   height: 185px;
   margin: 0 auto;
@@ -932,7 +1013,7 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: drop-shadow( 2px, 2px, 4px, 4px, rgba( 0, 0, 0, 0.40));
+/*  filter: drop-shadow( 2px 2px 4px rgba( 0, 0, 0, 0.40));*/
 }
 
 .web-service p {
@@ -960,7 +1041,7 @@ main {
   color: #ffffff;
   margin-top: -112px;
   padding-right: 32px;
-  text-shadow: -2px -2px 3px #c2b2b2, 2px 2px 3px #c2b2b2;
+  text-shadow: -1px -1px 1px #c2b2b2, 1px 1px 1px #c2b2b2;
 }
 
 .pm-service p {
@@ -1153,7 +1234,7 @@ main {
 .trademark-aboutus div img {
   z-index: 2;
   width: 100%;
-  height: 100;
+  height: 100%;
   object-fit: cover;
   border: 1px solid rgba( 20, 20, 20, 0.15 );
   filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
@@ -1172,21 +1253,21 @@ main {
   /* ========================== */
 
   h2 {
-    font-size: 26px;
-    line-height: 32px;
-    letter-spacing: 2.6px;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 3.0px;
   }
 
   h3 {
-    font-size: 26px;
-    line-height: 32px;
-    letter-spacing: 2.6px;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 2.8px;
   }
 
   .regtext {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 40px;
-    letter-spacing: 2.6px;
+    letter-spacing: 2.4px;
   }
 
   /*+ ===================================== +*/
@@ -1234,14 +1315,14 @@ main {
   .header-nav {
     display: block;
     position: relative;
-    top: 108px;
+    top: 100px;
     width: 100%;
     height: 20px;
     margin-top: -20px;
   /*  background-color: #fe9393;*/
   }
   .header-nav nav {
-    width: 630px;
+    width: 660px;
     margin: 0 auto;
   }
   .header-nav nav ul {
@@ -1252,7 +1333,8 @@ main {
     gap: 20px;
   }
   .header-nav nav ul li {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 20px;
     letter-spacing: 2.4px;
   }
@@ -1413,7 +1495,7 @@ main {
   }
 
   .main-visula-narration-index {
-    line-height: 32px;
+    line-height: 48px;
     letter-spacing: 2.0px;
   }
 
@@ -1586,7 +1668,7 @@ main {
   /* 全体の構造 */
   .flexbox-right-company {
     display: grid;
-    grid-template-columns: 1fr 384px;
+    grid-template-columns: 1fr 264px;
     grid-template-rows: 72px auto 88px;
     grid-template-areas:
         "TitleBox-comp TitleBox-comp"
@@ -1597,8 +1679,9 @@ main {
 
   .flexbox-left-company {
     display: grid;
-    grid-template-columns: 384px 1fr;
+    grid-template-columns: 264px 1fr;
     grid-template-rows: 72px auto 88px;
+    grid-column-gap: 16px;
     grid-template-areas:
         "TitleBox-comp TitleBox-comp"
         "FigBox-comp TextBox-comp"
@@ -1625,9 +1708,9 @@ main {
   .figure-area-company {
     display: block;
     grid-area: FigBox-comp;
-    width: 240px;
-    height: 240px;
-    margin: 0 auto auto auto;
+    width: 200px;
+    height: 200px;
+    margin: 32px auto auto auto;
     object-fit: cover;
 /*    background-color: #a670f2;*/
   }
@@ -1886,7 +1969,7 @@ main {
   }
 
   .regtext {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 40px;
     letter-spacing: 2.2px;
   }
@@ -2173,6 +2256,33 @@ main {
   .main-visula-narration-company {
     line-height: 64px;
     letter-spacing: 3.2px;
+  }
+
+ .flexbox-right-company {
+    grid-template-columns: 1fr 344px;
+    grid-template-rows: 72px auto 88px;
+/*    background-color: #e8f290;*/
+  }
+
+  .flexbox-left-company {
+    grid-template-columns: 344px 1fr;
+    grid-template-rows: 72px auto 88px;
+    grid-column-gap: 16px;
+/*    background-color: #e8f290;*/
+  }
+
+  .figure-area-company {
+    width: 280px;
+    height: 280px;
+    margin: 32px auto auto auto;
+/*    background-color: #a670f2;*/
+  }
+
+  .title-in-text-comp {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 2.8px;
   }
 
   /*+ ===================================== +*/

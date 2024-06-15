@@ -34,12 +34,7 @@
         <p class="LogoText"><span class="LogoTextFig">ミカゲITラボ</span></p>
       </div>
 
-      <!-- ハンバーガーメニュ -->
-      <figure class="hamburger-menu">
-        <img src="./image/parts/hamburger-menu.png" alt="ハンバーガーメニュー" />
-      </figure>
-
-      <!-- ヘッダーナビゲーション -->
+       <!-- スマフォ以外のヘッダーナビゲーション -->
       <div class="header-nav">
         <nav>
           <ul>
@@ -47,10 +42,46 @@
             <li><a href="./company.html">会社紹介</a></li>
             <li><a href="./service.html">サービス説明</a></li>
             <li><a href="./aboutus.html">About US</a></li>
-            <li><a href="#">問い合わせ</a></li>
+            <li><a href="./#">問い合わせ</a></li>
           </ul>
         </nav>
       </div>
+
+      <!-- スマフォ専用メニュー画面 -->
+      <div class="hamburger-menu">
+
+        <!-- ハンバーガーメニュー -->
+        <figure class="menu-toggle">
+          <img src="./image/parts/hamburger-menu.png" alt="ハンバーガーメニュー" class="hamburger-bottun" />
+        </figure>
+
+        <!-- スマフォ用ナビゲーション画面 -->
+        <div class="menu">
+
+          <!-- 閉じるボタン -->
+          <figure class="close-button">
+            <img src="./image/parts/close-button.png" alt="閉じるボタン" />
+          </figure>
+
+          <!-- スマフォ専用ナビゲーション -->
+          <div class="header-nav-sp">
+            <h3>メニュー</h3>
+            <nav>
+              <ul>
+                <li><a href="./index.html">トップ</a></li>
+                <li><a href="./company.html">会社紹介</a></li>
+                <li><a href="./service.html">サービス説明</a></li>
+                <li><a href="./aboutus.html">About US</a></li>
+                <li><a href="./#">お問い合わせ</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+
+      <!-- ここまで：スマフォ専用メニュー画面 -->
+      </div>
+
     </header>
 
     <!-- メイン -->
@@ -310,6 +341,8 @@
       </div>
     </footer>
 
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
   </body>
 
 </html>

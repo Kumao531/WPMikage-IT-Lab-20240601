@@ -1,12 +1,13 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var textContainer = document.getElementById("textContainer");
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuClose = document.querySelector('.close-button');
+    const menu = document.querySelector('.menu');
 
-    // コンテナの計算された高さを取得
-    var computedHeight = textContainer.scrollHeight;
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('show');
+    });
 
-    // 計算された高さを表示
-    console.log("Computed Height: " + computedHeight + "px");
-
-    // 計算した高さをコンテナに設定（必要に応じて）
-    textContainer.style.height = computedHeight + "px";
+    menuClose.addEventListener('click', function() {
+        menu.classList.remove('show');
+    });
 });
