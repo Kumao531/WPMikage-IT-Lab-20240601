@@ -15,33 +15,6 @@ body {
   margin: 0  auto;
 }
 
-/* bodyの空白枠除き、全方向にFlexにする */
-/*
-body{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  width: 100%;
-  margin: 0;
-}
-header {
-  display: block;
-  grid-column: 1;
-  grid-row: 2;
-}
-main {
-  display: block;
-  grid-column: 1;
-  grid-row: 2;
-}
-footer {
-  display: block;
-  grid-column: 1;
-  grid-row: 3;
-}
-*/
-
-
 /* コンテナーの最大サイズ */
 .container{
   max-width: 1400px;
@@ -185,6 +158,9 @@ header {
   height: 160px;
   width: 100%;
 }
+.header-serv-sub {
+  height: 96px;
+}
 
 /* ヘッダーのトレードマークの定義 */
 .trade-mark {
@@ -195,6 +171,9 @@ header {
   width: 208px;
   height: 64px;
 /*  background-color: orange;*/
+}
+.trade-mark-serv-sub {
+  top: 16px;
 }
 .LogoMark {
   display: block;
@@ -232,19 +211,21 @@ header {
 /* スマフォ用ナビゲーション画面
 /******************************/
 /*** PC用メニュー ***/
-.header-nav {
+.header-nav,
+.header-nav-serv-sub {
   display: none;
 }
 
 /*** スマフォ用メニュー ***/
 /*** ハンバーガーボタン ***/
-.hamburger-menu {
+.hamburger-menu, .hamburger-menu-serv-sub {
   display: block;
   position: fixed;
   top: 0;
   left: 0;
 }
-.hamburger-menu .menu-toggle {
+.hamburger-menu .menu-toggle,
+.hamburger-menu-serv-sub .menu-toggle-serv-sub {
   display: block;
   position: fixed;
   top: 20px;
@@ -253,13 +234,15 @@ header {
   height: 56px;
   opacity: 0.75;
 }
-.hamburger-menu .menu-toggle img {
+.hamburger-menu .menu-toggle img,
+.hamburger-menu-serv-sub .menu-toggle-serv-sub img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 /*** メニュー画面 ***/
-.hamburger-menu .menu  {
+.hamburger-menu .menu,
+.hamburger-menu-serv-sub .menu-serv-sub {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -271,11 +254,13 @@ header {
   background-color: #181818;
   overflow: nowrap;
 }
-.hamburger-menu .menu.show {
+.hamburger-menu .menu.show,
+.hamburger-menu-serv-sub .menu-serv-sub.show {
   display: block;
 }
 /*** 閉じるボタン ***/
-.hamburger-menu .menu .close-button {
+.hamburger-menu .menu .close-button,
+.hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub {
   display: block;
   position: fixed;
   top: 20px;
@@ -284,13 +269,15 @@ header {
   height: 56px;
   opacity: 1.00;
 }
-.hamburger-menu .menu .close-button img {
+.hamburger-menu .menu .close-button img,
+.hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 /*** ナビゲーション ***/
-.hamburger-menu .menu .header-nav-sp {
+.hamburger-menu .menu .header-nav-sp,
+.hamburger-menu-serv-sub .menu-serv-sub .header-nav-sp {
   display: block;
   position: relative;
   width: 180px;
@@ -347,7 +334,7 @@ header {
   text-align: left;
 }
 .footer-text {
-  font-style: "Noto Serif";
+  font-style: "Noto Serif JP";
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -399,16 +386,34 @@ header {
 }
 
 /* ナビゲーション */
+.footer-serv-sub {
+  display: block;
+  width: 100%;
+  height: 160px;
+  margin: 0 auto;
+}
+.footer-nav-serv-sub {
+  display: block;
+  position: relative;
+  width: 144px;
+  margin: 0 auto;
+  padding-top: 8px;
+}
 .footer-nav nav {
   margin-top: 24px;
   margin-left: 40px;
 }
-.footer-nav nav ul {
+.footer-nav-serv-sub nav {
+  margin-top: 8px;
+  margin-left: 40px;
+}
+.footer-nav nav ul,
+.footer-nav-serv-sub nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
-.footer-nav nav ul li {
+.footer-nav nav ul li{
   margin-bottom: 32px;
   font-family: "Noto Sans HK";
   font-size: 18px;
@@ -416,15 +421,26 @@ header {
   line-height: 18px;
   letter-spacing: 2.16px;
 }
-.footer-nav nav ul li a {
+.footer-nav-serv-sub nav ul li {
+  margin-bottom: 8px;
+  font-family: "Noto Sans HK";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 2.16px;
+}
+.footer-nav nav ul li a,
+.footer-nav-serv-sub nav ul li a {
   text-decoration: none;
   color: #7241FE;
   display: block;
   padding: 5px 10px;
 }
-.footer-nav nav ul li a:hover {
+.footer-nav nav ul li a:hover,
+.footer-nav-serv-sub nav ul li a:hover {
   color: #ecd525;
 }
+
 
 /* コピーライト */
 .footer-copyright {
@@ -436,7 +452,7 @@ header {
 }
 
 .copyright-text {
-  font-style: "Noto Serif";
+  font-style: "Noto Serif JP";
   font-size: 16px;
   line-height: 16px;
   margin: 0 16px 16px 0;
@@ -549,24 +565,6 @@ main {
   text-align: left;
   color: #181818;
 }
-
-/*+++ 主記述部 +++*/
-/* 全体の構造 */
-/*
-.main-description {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-}
-.main-visual {
-  grid-column: 1;
-  grid-row: 1;
-}
-.main-description-index {
-  grid-column: 1;
-  grid-row: 2;
-}
-*/
 
 .declaration-index {
   display: grid;
@@ -909,7 +907,6 @@ main {
   background-color: #221EEB;
 }
 
-
 .return-top-company {
   display: flex;
   justify-content: flex-end;
@@ -1008,14 +1005,17 @@ main {
   height: 185px;
   margin: 0 auto;
 }
-.plate-service img {
+.plate-service a img {
   z-index: 50;
   width: 100%;
   height: 100%;
   object-fit: cover;
 /*  filter: drop-shadow( 2px 2px 4px rgba( 0, 0, 0, 0.40));*/
 }
-
+.plate-service a {
+  text-decoration: none;
+}
+/*AAA*/
 .web-service p {
   z-index: 52;
   font-family: "Noto Sans JP";
@@ -1279,6 +1279,9 @@ main {
     height: 200px;
     width: 100%;
   }
+  .header-serv-sub {
+    height: 112px;
+  }
 
   /* ヘッダーのトレードマークの定義 */
   .trade-mark {
@@ -1287,6 +1290,9 @@ main {
     width: 280px;
     height: 80px;
 /*    background-color: orange;*/
+  }
+  .trade-mark-serv-sub {
+    top: 16px;
   }
   .LogoMark {
     width: 80px;
@@ -1348,9 +1354,30 @@ main {
     color: #ecd525;
   }
 
+  .header-nav-serv-sub {
+    display: flex;
+  }
+  .header-nav-serv-sub span {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 2.4px;
+    margin: 0 auto;
+  }
+  .header-nav-serv-sub span a {
+    text-decoration: none;
+    color: #7241FE;
+    display: block;
+    padding: 5px 10px;
+  }
+  .header-nav-serv-sub span a:hover {
+    color: #ecd525;
+  }
+
   /*** ハンバーガーメニュー ***/
   /* 非表示にする */
-  .hamburger-menu {
+  .hamburger-menu,
+  .hamburger-menu-serv-sub {
     display: none;
   }
 
@@ -1412,6 +1439,12 @@ main {
   }
 
   /* ナビゲーション */
+  .footer-serv-sub {
+    display: block;
+    width: 100%;
+    height: 178px;
+    margin: 0 auto;
+  }
   .footer-nav nav {
     margin-top: 32px;
     margin-left: 40px;
@@ -1631,19 +1664,19 @@ main {
     letter-spacing: 2.8px;
     padding-top: 24px;
   }
-.motto-describe-index {
-  width: 100%;
-  padding-top: 36px;
-}
-.motto-describe-index ul {
-  width: 100%;
-  list-style-type: none;
-  margin-left: -36px;
-}
-.motto-describe-index ul li {
-  margin-left: 40px;
-  padding-bottom: 10px;
-}
+  .motto-describe-index {
+    width: 100%;
+    padding-top: 36px;
+  }
+  .motto-describe-index ul {
+    width: 100%;
+    list-style-type: none;
+    margin-left: -36px;
+  }
+  .motto-describe-index ul li {
+    margin-left: 40px;
+    padding-bottom: 10px;
+  }
 
   /*+ ===================================== +*/
   /*+ 主記述部（company）
@@ -1983,6 +2016,9 @@ main {
     height: 240px;
     width: 100%;
   }
+  .header-serv-sub {
+    height: 136px;
+  }
 
   /* ヘッダーのトレードマークの定義 */
   .trade-mark {
@@ -1993,6 +2029,9 @@ main {
     width: 320px;
     height: 96px;
 /*    background-color: orange;*/
+  }
+  .trade-mark-serv-sub {
+    top: 16px;
   }
   .LogoMark {
     width: 96px;
@@ -2236,8 +2275,6 @@ main {
     grid-column: 5 / 7;
     grid-row: 4;
   }
-
-
 
   /*+ ===================================== +*/
   /*+ 主記述部（company）

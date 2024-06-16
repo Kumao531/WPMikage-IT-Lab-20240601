@@ -10,4 +10,5 @@ document.addEventListener('DOMContentLoaded', function() {
     menuClose.addEventListener('click', function() {
         menu.classList.remove('show');
     });
+
 });
