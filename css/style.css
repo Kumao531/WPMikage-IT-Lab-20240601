@@ -11,6 +11,7 @@
 
 body {
   display: block;
+  position: relative;
   width: 100%;
   margin: 0  auto;
 }
@@ -36,6 +37,10 @@ span {
   color: #181818;
 }
 
+header {
+  position: relative;
+  z-index: 99;
+}
 header, footer {
 /*  background-color: #181818; */
   background-color: #181818;
@@ -180,7 +185,8 @@ header {
   height: 160px;
   width: 100%;
 }
-.header-serv-sub {
+.header-serv-sub,
+.header-inq {
   height: 96px;
 }
 
@@ -194,7 +200,8 @@ header {
   height: 64px;
 /*  background-color: orange;*/
 }
-.trade-mark-serv-sub {
+.trade-mark-serv-sub,
+.trade-mark-inq {
   top: 16px;
 }
 .LogoMark {
@@ -234,20 +241,22 @@ header {
 /******************************/
 /*** PC用メニュー ***/
 .header-nav,
-.header-nav-serv-sub {
+.header-nav-serv-sub,
+.header-nav-inq {
   display: none;
 }
 
 /*** スマフォ用メニュー ***/
 /*** ハンバーガーボタン ***/
-.hamburger-menu, .hamburger-menu-serv-sub {
+.hamburger-menu, .hamburger-menu-serv-sub, .hamburger-menu-inq {
   display: block;
   position: fixed;
   top: 0;
   left: 0;
 }
 .hamburger-menu .menu-toggle,
-.hamburger-menu-serv-sub .menu-toggle-serv-sub {
+.hamburger-menu-serv-sub .menu-toggle-serv-sub,
+.hamburger-menu-inq .menu-toggle-inq {
   display: block;
   position: fixed;
   top: 20px;
@@ -257,14 +266,16 @@ header {
   opacity: 0.75;
 }
 .hamburger-menu .menu-toggle img,
-.hamburger-menu-serv-sub .menu-toggle-serv-sub img {
+.hamburger-menu-serv-sub .menu-toggle-serv-sub img,
+.hamburger-menu-inq .menu-toggle-inq img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 /*** メニュー画面 ***/
 .hamburger-menu .menu,
-.hamburger-menu-serv-sub .menu-serv-sub {
+.hamburger-menu-serv-sub .menu-serv-sub,
+.hamburger-menu-inq .menu-inq {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -277,12 +288,14 @@ header {
   overflow: nowrap;
 }
 .hamburger-menu .menu.show,
-.hamburger-menu-serv-sub .menu-serv-sub.show {
+.hamburger-menu-serv-sub .menu-serv-sub.show,
+.hamburger-menu-inq .menu-inq.show {
   display: block;
 }
 /*** 閉じるボタン ***/
 .hamburger-menu .menu .close-button,
-.hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub {
+.hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub,
+.hamburger-menu-inq .menu-inq .close-button-inq {
   display: block;
   position: fixed;
   top: 20px;
@@ -292,14 +305,16 @@ header {
   opacity: 1.00;
 }
 .hamburger-menu .menu .close-button img,
-.hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub img {
+.hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub img,
+.hamburger-menu-inq .menu-inq .close-button-inq img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 /*** ナビゲーション ***/
 .hamburger-menu .menu .header-nav-sp,
-.hamburger-menu-serv-sub .menu-serv-sub .header-nav-sp {
+.hamburger-menu-serv-sub .menu-serv-sub .header-nav-sp,
+.hamburger-menu-inq .menu-inq .header-nav-sp {
   display: block;
   position: relative;
   width: 180px;
@@ -1022,13 +1037,11 @@ main {
 }
 
 .plate-service {
-  z-index: 50;
   width: 300px;
   height: 185px;
   margin: 0 auto;
 }
 .plate-service a img {
-  z-index: 50;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1182,20 +1195,32 @@ main {
 /*  background-color: #f7ff8b;*/
 }
 
+.nodecoration-about {
+  text-decoration: none;
+}
+
+.reference-abotus{
+  position: relative;
+}
+
 .ref-fig-aboutus {
+  display: block;
+  position: relative;
   width: 300px;
   height: 48px;
   border: 1px solid rgba( 20, 20, 20, 0.15 );
   filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
   margin: 0 auto;
 }
-.ref-fig-aboutus a img {
+.ref-fig-aboutus img {
+  position:relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .ref-fig-aboutus p {
+  position: relative;
   font-family: "Noto Sans JP";
   font-size: 24px;
   font-weight: 700;
@@ -1401,7 +1426,8 @@ main {
     height: 200px;
     width: 100%;
   }
-  .header-serv-sub {
+  .header-serv-sub,
+  .header-inq {
     height: 112px;
   }
 
@@ -1413,7 +1439,8 @@ main {
     height: 80px;
 /*    background-color: orange;*/
   }
-  .trade-mark-serv-sub {
+  .trade-mark-serv-sub,
+  .trade-mark-inq {
     top: 16px;
   }
   .LogoMark {
@@ -1476,30 +1503,35 @@ main {
     color: #ecd525;
   }
 
-  .header-nav-serv-sub {
+  .header-nav-serv-sub,
+  .header-nav-inq {
     display: flex;
   }
-  .header-nav-serv-sub span {
+  .header-nav-serv-sub span,
+  .header-nav-inq span {
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
     letter-spacing: 2.4px;
     margin: 0 auto;
   }
-  .header-nav-serv-sub span a {
+  .header-nav-serv-sub span a,
+  .header-nav-inq span a {
     text-decoration: none;
     color: #7241FE;
     display: block;
     padding: 5px 10px;
   }
-  .header-nav-serv-sub span a:hover {
+  .header-nav-serv-sub span a:hover,
+  .header-nav-inq span a:hover {
     color: #ecd525;
   }
 
   /*** ハンバーガーメニュー ***/
   /* 非表示にする */
   .hamburger-menu,
-  .hamburger-menu-serv-sub {
+  .hamburger-menu-serv-sub,
+  .hamburger-menu-inq {
     display: none;
   }
 
@@ -2225,7 +2257,8 @@ main {
     height: 240px;
     width: 100%;
   }
-  .header-serv-sub {
+  .header-serv-sub,
+  .header-inq {
     height: 136px;
   }
 
@@ -2239,7 +2272,8 @@ main {
     height: 96px;
 /*    background-color: orange;*/
   }
-  .trade-mark-serv-sub {
+  .trade-mark-serv-sub,
+  .trade-mark-inq {
     top: 16px;
   }
   .LogoMark {
