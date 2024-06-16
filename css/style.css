@@ -15,6 +15,10 @@ body {
   margin: 0  auto;
 }
 
+span {
+  white-space: nowrap;
+}
+
 /* コンテナーの最大サイズ */
 .container{
   max-width: 1400px;
@@ -84,13 +88,13 @@ header, footer {
 
 h2 {
   font-family: "Noto Sans JP";
-  font-size: 26px;
+  font-size: 30px;
   font-weight: bold;
-  line-height: 26px;
-  letter-spacing: 2.6px;
+  line-height: 30px;
+  letter-spacing: 3.0px;
   color: #181818;
 }
-
+/*AAA*/
 h3 {
   font-family: "Noto Sans JP";
   font-size: 24px;
@@ -100,11 +104,29 @@ h3 {
   color: #181818;
 }
 
+h4 {
+  font-family: "Noto Sans JP";
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 2.2px;
+  color: #181818;
+}
+
+h5 {
+  font-family: "Noto Sans JP";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1.8px;
+  color: #181818;
+}
+
 .regtext {
   font-family: "Noto Serif JP";
   font-size: 18px;
   font-weight: normal;
-  line-height: 32px;
+  line-height: 30px;
   letter-spacing: 2.4px;
   color: #181818;
 }
@@ -1240,6 +1262,88 @@ main {
   filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
 }
 
+/*+ ===================================== +*/
+/*+ 主記述部（serviceの呼び出し子画面）
+/** ===================================== +*/
+.main-description-serv-sub {
+  padding-bottom: 24px;
+}
+
+.h2-serv-sub {
+  margin: 0;
+  padding-top: 16px;
+}
+
+.h3-serv-sub {
+  line-height: 30px;
+  margin: 0;
+  padding-top: 40px;
+  padding-left: 16px;
+  color: #32049f;
+}
+
+.h4-serv-sub {
+  line-height: 28px;
+  font-style: italic;
+  margin: 0;
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  color: #570202;
+}
+
+.h5-serv-sub {
+  line-height: 24px;
+  margin: 0;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 0;
+}
+
+.p-1-serv-sub {
+   margin: 0;
+  padding-top: 16px;
+  padding-left: 16px;
+}
+.p-2-serv-sub {
+  margin: 0;
+  padding-top: 8px;
+  padding-left: 16px;
+}
+.p-2-serv-notop-sub {
+  margin: 0;
+  padding-top: 0;
+  padding-left: 16px;
+}
+.p-3-serv-sub {
+  margin: 0;
+  padding-top: 8px;
+  padding-left: 16px;
+}
+
+.ul-0-serv-sub {
+  margin: 0;
+  padding-top: 8px;
+}
+.ul-0-serv-sub li {
+  margin-left: 0;
+  margin-bottom: 8px;
+}
+
+.ul-serv-sub {
+  margin: 0;
+  padding-top: 8px;
+}
+.ul-serv-sub li {
+  font-style: "Noto Serif JP";
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+  margin-left:8px;
+  margin-bottom: 8px;
+  color: #181818;
+}
+
 /*  ▼ タブレット以上の場合に適用するCSS ▼
 /* -------------------------------------------- */
 /*@media (min-width: 600px) {*/
@@ -1262,6 +1366,24 @@ main {
     font-size: 28px;
     line-height: 28px;
     letter-spacing: 2.8px;
+  }
+
+  h4 {
+    font-family: "Noto Sans JP";
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 26px;
+    letter-spacing: 2.6px;
+    color: #181818;
+  }
+
+  h5 {
+    font-family: "Noto Sans JP";
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 2.4px;
+    color: #181818;
   }
 
   .regtext {
@@ -1968,6 +2090,81 @@ main {
   .trademark-aboutus div img {
   }
 
+  /*+ ===================================== +*/
+  /*+ 主記述部（serviceの呼び出し子画面）
+  /** ===================================== +*/
+  .main-description-serv-sub {
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
+
+  .h2-serv-sub {
+    padding-top: 32px;
+  }
+
+  .h3-serv-sub {
+    padding-top: 48px;
+    padding-left: 36px;
+  }
+
+  .h4-serv-sub {
+    padding-top: 32px;
+    padding-left: 64px;
+  }
+
+  .h5-serv-sub {
+    line-height: 28px;
+    margin: 0;
+    padding-top: 8px;
+    padding-left: 96px;
+    padding-bottom: 8px;
+  }
+
+  .p-1-serv-sub {
+    padding-top: 16px;
+    padding-left: 64px;
+    padding-right: 40px;
+  }
+  .p-2-serv-sub {
+    padding-top: 16px;
+    padding-left: 96px;
+    padding-right: 40px;
+  }
+  .p-2-serv-notop-sub {
+    padding-top: 0;
+    padding-left: 96px;
+    padding-right: 40px;
+  }
+  .p-3-serv-sub {
+    margin: 0;
+    padding-top: 8px;
+    padding-left: 120px;
+    padding-right: 40px;
+  }
+
+  .ul-0-serv-sub {
+    margin: 0;
+    padding-top: 8px;
+  }
+  .ul-0-serv-sub li {
+    margin-left: 80px;
+    margin-bottom: 8px;
+    padding-right: 40px;
+  }
+
+  .ul-serv-sub {
+    padding-left: 116px;
+    padding-top: 16px;
+  }
+  .ul-serv-sub li {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2.0px;
+    margin-left: 24px;
+    margin-bottom: 16px;
+    padding-right: 40px;
+  }
+
 /* end media tablet phone */
 }
 
@@ -1990,15 +2187,27 @@ main {
   /* ========================== */
 
   h2 {
-    font-size: 32px;
-    line-height: 36px;
-    letter-spacing: 3.2px;
+    font-size: 34px;
+    line-height: 34px;
+    letter-spacing: 3.4px;
   }
 
   h3 {
     font-size: 30px;
-    line-height: 34px;
+    line-height: 30px;
     letter-spacing: 3.0px;
+  }
+
+  h4 {
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 2.6px;
+  }
+
+  h5 {
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2.2px;
   }
 
   .regtext {
@@ -2421,5 +2630,64 @@ main {
   .trademark-aboutus div img {
   }
 
-/* end media pc phone */
+  /*+ ===================================== +*/
+  /*+ 主記述部（serviceの呼び出し子画面）
+  /** ===================================== +*/
+  .main-description-serv-sub {
+    padding-left: 62px;
+    padding-bottom: 40px;
+  }
+
+  .h2-serv-sub {
+    padding-top: 48px;
+  }
+
+  .h3-serv-sub {
+    padding-top: 40px;
+    padding-left: 32px;
+  }
+
+  .h4-serv-sub {
+    padding-top: 24px;
+    padding-left: 64px;
+  }
+
+  .p-1-serv-sub {
+    padding-top: 16px;
+    padding-left: 64px;
+    padding-right: 96px;
+  }
+  .p-2-serv-sub {
+    padding-top: 16px;
+    padding-left: 96px;
+  }
+  .p-2-serv-notop-sub {
+    padding-top: 0;
+    padding-left: 96px;
+  }
+
+  .ul-0-serv-sub {
+    margin: 0;
+    padding-top: 8px;
+  }
+  .ul-0-serv-sub li {
+    margin-left: 80px;
+    margin-bottom: 8px;
+    padding-right: 96px;
+  }
+
+  .ul-serv-sub {
+    padding-left: 116px;
+    padding-top: 16px;
+  }
+  .ul-serv-sub li {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2.0px;
+    margin-left: 24px;
+    margin-bottom: 16px;
+    padding-right: 96px;
+  }
+
+/* end media tablet phone */
 }
