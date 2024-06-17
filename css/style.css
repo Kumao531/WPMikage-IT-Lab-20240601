@@ -99,7 +99,7 @@ h2 {
   letter-spacing: 3.0px;
   color: #181818;
 }
-/*AAA*/
+
 h3 {
   font-family: "Noto Sans JP";
   font-size: 24px;
@@ -133,6 +133,24 @@ h5 {
   font-weight: normal;
   line-height: 30px;
   letter-spacing: 2.4px;
+  color: #181818;
+}
+
+.regtext {
+  font-family: "Noto Serif JP";
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 30px;
+  letter-spacing: 1.8px;
+  color: #181818;
+}
+
+.regtext-small {
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  letter-spacing: 1.4px;
   color: #181818;
 }
 
@@ -1050,7 +1068,7 @@ main {
 .plate-service a {
   text-decoration: none;
 }
-/*AAA*/
+
 .web-service p {
   z-index: 52;
   font-family: "Noto Sans JP";
@@ -1369,6 +1387,251 @@ main {
   color: #181818;
 }
 
+/*+ ===================================== +*/
+/*+ 主記述部（aboutusの呼び出し子画面）
+/** ===================================== +*/
+
+.main-description-inq {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 24px;
+}
+
+/*** 色指定 ***/
+.border-1-inq {
+  background-color: #eb2796;
+}
+
+.back-1-inq {
+  background-color: #dee1fd;
+  border-radius: 10px;
+}
+
+.back-2-inq {
+  background-color: #fefbd1;
+  border-radius: 10px;
+}
+
+/*** inq-company-info ***/
+.line-container-company-info-inq {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.text-company-info-inq {
+  margin-right: 10px;
+}
+.line-company-info-inq {
+  width: 200px;
+  height: 3px;
+  opacity: 0.50;
+}
+
+.company-info-container-inq {
+  display: grid;
+  grid-template-columns: 1fr 272px 1fr;
+  grid-template-rows: repeat( 2, auto );
+  grid-row-gap: 3px;
+  padding-bottom: 24px;
+}
+
+.company-info-head-inq {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding: 4px 8px;
+}
+
+.company-info-body-inq {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  padding: 4px 8px;
+}
+
+.map-inq {
+  display: grid;
+  position: relative;
+  grid-template-columns: 8px 1fr 24px;
+  grid-template-rows: 240px;
+  overflow: hidden;
+  margin-left: 24px;
+}
+.map-inq iframe {
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*** inq-company-info ***/
+.header-h3-inq {
+  margin-top: 32px;
+}
+.header-h3-inq .text-company-info-inq h3 {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.company-info-inq p {
+  margin: 0;
+  padding-top: 16px;
+  line-height: 24px;
+  padding-bottom: 16px;
+}
+
+/*** inq-environ-info ***/
+.environ-info-inq {
+  margin: 16px 0 24px 0;
+  width: 320px;
+  overflow: hidden;
+}
+.environ-info-inq img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0.5px solid rgba( 64, 64, 64, 0.20 );
+}
+
+/*** inq-personal-info ***/
+.name-inq {
+  margin-top: 32px;
+  margin-left: 32px
+}
+.name-inq .name-kanji-inq {
+  font-family: "Noto Serif JP";
+  font-size: 32px;
+  line-height: 32px;
+  margin: 0;
+  padding: 0;
+}
+.name-inq .name-kana-inq {
+  font-family: "Noto Sans JP";
+  font-size: 16px;
+  line-height: 24px;
+  margin:  4px 0 0 2px;
+  padding: 0;
+}
+
+.container-personal-info-inq {
+  display: grid;
+  grid-template-columns: 20px 300px 1fr;
+  grid-template-rows: auto auto;
+  grid-row-gap: 16px;
+  margin: 24px auto 16px auto;
+}
+.figure-personal-info-inq {
+  grid-column: 2;
+  grid-row: 1;
+  display: block;
+  width: 160px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.figure-personal-info-inq img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 0.5px solid rgba( 64, 64, 64, 0.20 );
+}
+.text-personal-info-inq {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0 auto;
+}
+.text-personal-info-inq p {
+
+}
+
+.text-personal-info-inq ul {
+  margin-left: -16px;
+}
+.text-personal-info-inq ul li {
+  line-height: 24px;
+  padding-bottom: 8px;
+}
+
+.career-info-inq p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 8px;
+}
+
+.one-career-info-inq {
+  line-height: 24px;
+  margin-bottom: 14px;
+}
+.one-career-info-inq details summary {
+  font-style: "Noto Sans JP";
+  font-size: 16px;
+}
+.one-career-info-inq details figure {
+  width: 280px;
+  overflow: hidden;
+}
+.one-career-info-inq details figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.career-container-inq figure {
+  display: none;
+}
+.career-notes-sp {
+  display: block;
+}
+.career-notes-nonsp {
+  display: none;
+}
+
+.kosokoso-inq {
+  display: none;
+  margin: 16px 0 0 0;
+  line-height: 26px;
+}
+
+.show-carrer-inq {
+  padding: 0;
+  margin: 8px 0 0 32px;
+}
+
+.hobby-hanazono-fig-inq {
+  margin-left: 0;
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+}
+.hobby-hanazono-fig-inq img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*** inq-motto ***/
+.motto-inq {
+  margin: 56px 0 0 0;
+}
+.motto-inq ul {
+  list-style: none;
+}
+.motto-inq ul li {
+  font-family: "Noto Serif JP";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 2.4px;
+  margin-bottom: 16px;
+}
+
+.motto-description-inq {
+  margin-top: 64px;
+}
+.motto-description-inq p {
+  margin: 12px 0 0 0;
+}
+
 /*  ▼ タブレット以上の場合に適用するCSS ▼
 /* -------------------------------------------- */
 /*@media (min-width: 600px) {*/
@@ -1415,6 +1678,15 @@ main {
     font-size: 24px;
     line-height: 40px;
     letter-spacing: 2.4px;
+  }
+
+  .regtext-small {
+    font-family: "Noto Serif JP";
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 2.0px;
+    color: #181818;
   }
 
   /*+ ===================================== +*/
@@ -2197,6 +2469,260 @@ main {
     padding-right: 40px;
   }
 
+  /*+ ===================================== +*/
+  /*+ 主記述部（aboutusの呼び出し子画面）
+  /** ===================================== +*/
+
+  .main-description-inq {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-description-inq {
+    display: block;
+    padding: 8px 24px 24px 24px;
+  }
+
+  /*** inq-company-info ***/
+  .line-container-company-info-inq {
+  }
+  .text-company-info-inq {
+    margin-right: 10px;
+  }
+  .line-company-info-inq {
+    width: 250px;
+  }
+
+  .line-container-company-info-inq {
+    margin-top: 40px;
+  }
+  .company-info-container-inq {
+    display: grid;
+    grid-template-columns: 1fr 176px 400px 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 8px;
+    padding-bottom: 16px;
+  }
+
+  .company-info-head-inq {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .company-info-body-inq {
+    grid-column: 3;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .map-inq {
+    display: grid;
+    position: relative;
+    grid-template-columns: 16px 560px 1fr;
+    grid-template-rows: 360px;
+    margin-left: 24px;
+  }
+  .map-inq iframe {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /*** inq-office-info ***/
+  .line-container-company-info-inq {
+    margin-top: 40px;
+  }
+  .header-h3-inq .text-company-info-inq h3 {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 32px;
+  }
+  .company-info-inq p {
+    padding-top: 16px;
+    line-height: 32px;
+    margin-left: 68px;
+  }
+
+  /*** inq-environ-info ***/
+  .environ-info-inq {
+    margin: 24px 0 32px 64px;
+    width: 400px;
+  }
+  .environ-info-inq img {
+  }
+
+  /*** inq-environ-info ***/
+  .environ-info-inq {
+    margin: 16px 0 24px 0;
+    width: 320px;
+    overflow: hidden;
+  }
+  .environ-info-inq img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0.5px solid rgba( 64, 64, 64, 0.20 );
+  }
+
+  /*** inq-personal-info ***/
+  .name-inq {
+    margin-top: 32px;
+    margin-left: 54px
+  }
+  .name-inq .name-kanji-inq {
+    font-family: "Noto Serif JP";
+    font-size: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+  }
+  .name-inq .name-kana-inq {
+    font-family: "Noto Sans JP";
+    font-size: 16px;
+    line-height: 24px;
+    margin:  4px 0 0 2px;
+    padding: 0;
+  }
+
+  .container-personal-info-inq {
+    display: grid;
+    grid-template-columns: 32px 1fr 32px;
+    grid-template-rows: auto auto;
+    grid-row-gap: 24px;
+    margin: 40px auto 0 auto;
+  }
+  .figure-personal-info-inq {
+    grid-column: 2;
+    grid-row: 1;
+    display: block;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .figure-personal-info-inq img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 0.5px solid rgba( 64, 64, 64, 0.20 );
+  }
+  .text-personal-info-inq {
+    grid-column: 2;
+    grid-row: 2;
+    margin: -32px auto 0;
+  }
+  .text-personal-info-inq p {
+
+  }
+
+  .text-personal-info-inq ul {
+    margin-left: -16px;
+  }
+  .text-personal-info-inq ul li {
+    line-height: 24px;
+    padding-bottom: 8px;
+  }
+
+  .career-info-inq p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: 56px;
+  }
+  .one-career-info-inq details {
+    display: grid;
+    grid-template-columns: 80px 10fr 1fr;
+    grid-template-rows: 32px auto;
+    margin: 0 16px 32px 56px;
+  }
+  .one-career-info-inq details summary {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    font-style: "Noto Sans JP";
+    font-size: 22px;
+  }
+  .one-career-info-inq details summary::before {
+    content: "▶ ";
+  }
+  .one-career-info-inq details figure {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    width: auto;
+    overflow: hidden;
+  }
+  .one-career-info-inq details figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .career-container-inq figure {
+    display: block;
+  }
+  .skill-exp-inq p {
+    margin-left: 32px;
+  }
+  .career-notes-sp {
+    display: none;
+  }
+  .career-notes-nonsp {
+    display: block;
+  }
+
+
+  .kosokoso-inq {
+    display: block;
+    margin: 16px 0 0 0;
+    line-height: 26px;
+  }
+
+  .show-carrer-inq{
+    padding: 0;
+    margin: 16px 0 0 64px;
+  }
+
+  .hobby-container-inq {
+    margin-left: 56px;
+  }
+  .hobby-hanazono-fig-inq {
+    margin-left: 0;
+    width: 600px;
+    height: 152px;
+    overflow: hidden;
+  }
+  .hobby-hanazono-fig-inq img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*** inq-motto ***/
+  .motto-inq {
+    margin: 64px 0 0 48px;
+  }
+  .motto-inq ul {
+    list-style: none;
+  }
+  .motto-inq ul li {
+    font-family: "Noto Serif JP";
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 2.8px;
+    margin-bottom: 40px;
+  }
+
+  .motto-description-inq {
+    margin-top: 64px;
+    margin-left: 32px;
+    margin-bottom: 16px;
+  }
+  .motto-description-inq p {
+    margin: 12px 0 18px 0;
+    line-height: 32px;
+  }
+
 /* end media tablet phone */
 }
 
@@ -2246,6 +2772,15 @@ main {
     font-size: 22px;
     line-height: 40px;
     letter-spacing: 2.2px;
+  }
+
+  .regtext-small {
+    font-family: "Noto Serif JP";
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 2.0px;
+    color: #181818;
   }
 
   /*+ ===================================== +*?
@@ -2721,6 +3256,218 @@ main {
     margin-left: 24px;
     margin-bottom: 16px;
     padding-right: 96px;
+  }
+
+  /*+ ===================================== +*/
+  /*+ 主記述部（aboutusの呼び出し子画面）
+  /** ===================================== +*/
+
+  /*** inq-company-info ***/
+  .main-description-inq {
+    margin: 0 32px 16px;
+  }
+
+  .line-container-company-info-inq {
+    margin-top: 56px;
+  }
+  .text-company-info-inq {
+    margin-right: 16px;
+  }
+  .line-company-info-inq {
+    width: 300px;
+  }
+
+  .main-description-inq {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 24px;
+  }
+
+  .company-info-container-inq {
+    display: grid;
+    grid-template-columns: 64px 176px 580px 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 12px;
+    padding-bottom: 24px;
+  }
+
+  .company-info-head-inq {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .company-info-body-inq {
+    grid-column: 3;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  .map-inq {
+    display: grid;
+    position: relative;
+    grid-template-columns: 48px 600px 1fr;
+    grid-template-rows: 420px;
+    margin-left: 24px;
+  }
+  .map-inq iframe {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /*** inq-environ-info ***/
+  .environ-info-inq {
+    margin: 32px 0 58px 64px;
+    width: 540px;
+  }
+  .environ-info-inq img {
+  }
+
+  /*** inq-personal-info ***/
+  .name-inq {
+    margin-top: 40px;
+    margin-left: 64px
+  }
+  .name-inq .name-kanji-inq {
+    font-family: "Noto Serif JP";
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+  .name-inq .name-kana-inq {
+    font-family: "Noto Sans JP";
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    margin:  10px 0 0 6px;
+    padding: 0;
+  }
+
+  .container-personal-info-inq {
+    display: grid;
+    grid-template-columns: 40px 300px 1fr 64px;
+    grid-template-rows: auto;
+    grid-column-gap: 24px;
+    margin: 40px auto 0 auto;
+  }
+  .figure-personal-info-inq {
+    grid-column: 2;
+    grid-row: 1;
+    display: block;
+    width: 280px;
+    height: 420px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .figure-personal-info-inq img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 0.5px solid rgba( 64, 64, 64, 0.20 );
+  }
+  .text-personal-info-inq {
+    grid-column: 3;
+    grid-row: 1;
+    margin: -32px auto 0;
+  }
+  .text-personal-info-inq p {
+
+  }
+
+  .text-personal-info-inq ul {
+    margin-left: -16px;
+  }
+  .text-personal-info-inq ul li {
+    line-height: 24px;
+    padding-bottom: 8px;
+  }
+
+  .career-info-inq p {
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: 80px;
+  }
+  .one-career-info-inq {
+    margin-right: 64px;
+    margin-bottom: 18px;
+  }
+  .one-career-info-inq details {
+    display: grid;
+    grid-template-columns: 80px 8fr 1fr;
+    grid-template-rows: 32px auto;
+    margin: 0 16px 24px 80px;
+  }
+  .one-career-info-inq details summary {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    font-style: "Noto Sans JP";
+    font-size: 22px;
+  }
+  .one-career-info-inq details figure {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    width: auto;
+    overflow: hidden;
+  }
+  .one-career-info-inq details figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .kosokoso-inq {
+    margin: 16px 0 0 0;
+    line-height: 32px;
+  }
+
+  .show-carrer-inq{
+    margin-top: 32px;
+    margin-left: 80px;
+  }
+
+  .hobby-container-inq {
+    margin-left: 80px;
+    padding-right: 64px;
+  }
+  .hobby-hanazono-fig-inq {
+    margin-left: 0;
+    width: 880px;
+    height: 224px;
+    overflow: hidden;
+  }
+  .hobby-hanazono-fig-inq img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*** inq-motto ***/
+  .motto-inq {
+    margin: 64px 0 0 48px;
+  }
+  .motto-inq ul {
+    list-style: none;
+  }
+  .motto-inq ul li {
+    font-family: "Noto Serif JP";
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 2.8px;
+    margin-bottom: 40px;
+  }
+
+  .motto-description-inq {
+    margin-top: 64px;
+    margin-left: 32px;
+    margin-bottom: 0;
+  }
+  .motto-description-inq p {
+    margin: 12px 0 18px 0;
+    line-height: 28px;
   }
 
 /* end media tablet phone */
