@@ -46,6 +46,18 @@ header, footer {
   background-color: #181818;
 }
 
+.text-blue {
+  color: #3a02e1;
+}
+
+.text-yellow {
+  color: #b8a904;
+}
+
+.text-red {
+  color: #b40000;
+}
+
 /* ========================== */
 /* フォント書体定義
 /* ========================== */
@@ -260,13 +272,14 @@ header {
 /*** PC用メニュー ***/
 .header-nav,
 .header-nav-serv-sub,
-.header-nav-inq {
+.header-nav-inq,
+.header-nav-show {
   display: none;
 }
 
 /*** スマフォ用メニュー ***/
 /*** ハンバーガーボタン ***/
-.hamburger-menu, .hamburger-menu-serv-sub, .hamburger-menu-inq {
+.hamburger-menu, .hamburger-menu-serv-sub, .hamburger-menu-inq, .hamburger-menu-show {
   display: block;
   position: fixed;
   top: 0;
@@ -274,7 +287,8 @@ header {
 }
 .hamburger-menu .menu-toggle,
 .hamburger-menu-serv-sub .menu-toggle-serv-sub,
-.hamburger-menu-inq .menu-toggle-inq {
+.hamburger-menu-inq .menu-toggle-inq,
+.hamburger-menu-show .menu-toggle-show {
   display: block;
   position: fixed;
   top: 20px;
@@ -285,7 +299,8 @@ header {
 }
 .hamburger-menu .menu-toggle img,
 .hamburger-menu-serv-sub .menu-toggle-serv-sub img,
-.hamburger-menu-inq .menu-toggle-inq img {
+.hamburger-menu-inq .menu-toggle-inq img,
+.hamburger-menu-show .menu-toggle-show img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -293,7 +308,8 @@ header {
 /*** メニュー画面 ***/
 .hamburger-menu .menu,
 .hamburger-menu-serv-sub .menu-serv-sub,
-.hamburger-menu-inq .menu-inq {
+.hamburger-menu-inq .menu-inq,
+.hamburger-menu-show .menu-show {
   display: none;
   position: fixed;
   z-index: 1000;
@@ -307,13 +323,15 @@ header {
 }
 .hamburger-menu .menu.show,
 .hamburger-menu-serv-sub .menu-serv-sub.show,
-.hamburger-menu-inq .menu-inq.show {
+.hamburger-menu-inq .menu-inq.show,
+.hamburger-menu-show .menu-show.show {
   display: block;
 }
 /*** 閉じるボタン ***/
 .hamburger-menu .menu .close-button,
 .hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub,
-.hamburger-menu-inq .menu-inq .close-button-inq {
+.hamburger-menu-inq .menu-inq .close-button-inq,
+.hamburger-menu-show .menu-show .close-button-show {
   display: block;
   position: fixed;
   top: 20px;
@@ -324,7 +342,8 @@ header {
 }
 .hamburger-menu .menu .close-button img,
 .hamburger-menu-serv-sub .menu-serv-sub .close-button-serv-sub img,
-.hamburger-menu-inq .menu-inq .close-button-inq img {
+.hamburger-menu-inq .menu-inq .close-button-inq img,
+.hamburger-menu-show .menu-show .close-button-show img {
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -332,7 +351,8 @@ header {
 /*** ナビゲーション ***/
 .hamburger-menu .menu .header-nav-sp,
 .hamburger-menu-serv-sub .menu-serv-sub .header-nav-sp,
-.hamburger-menu-inq .menu-inq .header-nav-sp {
+.hamburger-menu-inq .menu-inq .header-nav-sp,
+.hamburger-menu-show .menu-show .header-nav-sp {
   display: block;
   position: relative;
   width: 180px;
@@ -1596,6 +1616,17 @@ main {
   padding: 0;
   margin: 8px 0 0 32px;
 }
+.show-carrer-inq a {
+  font-family: "Noto Sans JP";
+  text-decoration: none;
+  font-weight: 600;
+  color: #1a02b9;
+}
+.show-carrer-inq a:hover {
+  text-decoration: none;
+  font-weight: 600;
+  color: #869c17;
+}
 
 .hobby-hanazono-fig-inq {
   margin-left: 0;
@@ -1630,6 +1661,87 @@ main {
 }
 .motto-description-inq p {
   margin: 12px 0 0 0;
+}
+
+/*+ ===================================== +*/
+/*+ 主記述部（inq-personal-infoの呼び出し子画面）
+/** ===================================== +*/
+
+/*AAA*/
+.main-description-show {
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.line-container-company-info-show {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.text-company-info-show {
+  margin-left: 8px;
+}
+.line-company-info-show {
+  width: 250px;
+  height: 3px;
+  opacity: 0.50;
+}
+
+.qualifications-show {
+
+}
+.qualifications-show ul {
+  margin: 0;
+  list-style: none;
+}
+.qualifications-show ul li {
+  line-height: 24px;
+  width: 264px;
+  margin: 0 32px 16px -16px;
+  padding: 2px 8px;
+  background-color: rgb(107, 107, 107, 0.10);
+  border-radius: 8px;
+}
+
+.skill-group-show {
+  margin-left: 24px;
+  margin-bottom: 24px;
+}
+.skill-kind-show {
+
+}
+.skill-kind-show h5 {
+  padding-bottom: 16px;
+  margin: 0;
+  color: #240ba0;
+}
+.skill-set-show {
+  display: grid;
+  grid-template-columns: 8px 40px 196px 1fr;
+  grid-template-rows: 40px 40px;
+  grid-row-gap: 8px;
+  margin-left: 16px;
+  padding: 0 0 8px 0;
+}
+.skill-title-show {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  margin: 0;
+  padding-left: 8px;
+  align-content: center;
+  background-color: rgba(220, 205, 87, 0.2);
+  border-radius: 8px;
+}
+.skill-years-show {
+  grid-column: 3;
+  grid-row: 2;
+  margin: 0;
+  padding-left: 8px;
+  align-content: center;
+  background-color: rgb(120, 105, 173, 0.2);
+  border-radius: 8px;
 }
 
 /*  ▼ タブレット以上の場合に適用するCSS ▼
@@ -1776,11 +1888,13 @@ main {
   }
 
   .header-nav-serv-sub,
-  .header-nav-inq {
+  .header-nav-inq,
+  .header-nav-show {
     display: flex;
   }
   .header-nav-serv-sub span,
-  .header-nav-inq span {
+  .header-nav-inq span,
+  .header-nav-show span {
     font-size: 18px;
     font-weight: 700;
     line-height: 20px;
@@ -1788,14 +1902,16 @@ main {
     margin: 0 auto;
   }
   .header-nav-serv-sub span a,
-  .header-nav-inq span a {
+  .header-nav-inq span a,
+  .header-nav-show span a   {
     text-decoration: none;
     color: #7241FE;
     display: block;
     padding: 5px 10px;
   }
   .header-nav-serv-sub span a:hover,
-  .header-nav-inq span a:hover {
+  .header-nav-inq span a:hover,
+  .header-nav-show span a:hover {
     color: #ecd525;
   }
 
@@ -1803,7 +1919,8 @@ main {
   /* 非表示にする */
   .hamburger-menu,
   .hamburger-menu-serv-sub,
-  .hamburger-menu-inq {
+  .hamburger-menu-inq,
+  .hamburger-menu-show {
     display: none;
   }
 
@@ -2723,6 +2840,79 @@ main {
     line-height: 32px;
   }
 
+  /*+ ===================================== +*/
+  /*+ 主記述部（inq-personal-infoの呼び出し子画面）
+  /** ===================================== +*/
+
+  /*AAA*/
+  .main-description-show {
+    display: block;
+    margin-left: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .line-container-company-info-show {
+    margin-left: 0;
+  }
+  .text-company-info-show {
+    margin-right: 8px;
+  }
+  .line-company-info-show {
+    width: 300px;
+  }
+
+  .qualifications-show {
+
+  }
+  .qualifications-show ul {
+    margin: 0;
+  }
+  .qualifications-show ul li {
+    line-height: 40px;
+    width: 512px;
+    margin: 0 32px 16px -16px;
+    padding: 2px 16px;
+    border-radius: 12px;
+  }
+
+  .skill-group-show {
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
+  .skill-kind-show {
+
+  }
+  .skill-kind-show h5 {
+    padding-bottom: 16px;
+    margin: 0;
+  }
+  .skill-set-show {
+    display: grid;
+    grid-template-columns: 8px 320px 160px 1fr;
+    grid-template-rows: 48px;
+    grid-column-gap: 16px;
+    padding: 0 0 8px 0;
+  }
+  .skill-title-show {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    padding-left: 16px;
+    align-content: center;
+    background-color: rgba(220, 205, 87, 0.2);
+    border-radius: 12px;
+  }
+  .skill-years-show {
+    grid-column: 3;
+    grid-row: 1;
+    margin: 0;
+    padding-left: 16px;
+    align-content: center;
+    background-color: rgb(120, 105, 173, 0.2);
+    border-radius: 12px;
+  }
+
 /* end media tablet phone */
 }
 
@@ -3468,6 +3658,59 @@ main {
   .motto-description-inq p {
     margin: 12px 0 18px 0;
     line-height: 28px;
+  }
+
+  /*AAA*/
+  /*+ ===================================== +*/
+  /*+ 主記述部（inq-personal-infoの呼び出し子画面）
+  /** ===================================== +*/
+
+  /*** show-skill ***/
+  .line-container-company-info-show {
+    margin-top: 16px;
+  }
+  .text-company-info-show {
+    margin-right: 16px;
+  }
+  .line-company-info-show {
+    width: 300px;
+  }
+
+  .main-description-show {
+    margin: 0 32px 16px;
+  }
+
+  .main-description-show {
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+
+  .skill-group-show {
+    margin-left: 32px;
+    margin-bottom: 32px;
+  }
+  .skill-kind-show {
+
+  }
+  .skill-kind-show h5 {
+    padding-bottom: 16px;
+    margin: 0;
+  }
+  .skill-set-show {
+    display: grid;
+    grid-template-columns: 16px 320px 160px 1fr;
+    grid-template-rows: 48px;
+    grid-column-gap: 16px;
+    padding: 0 0 12px 0;
+  }
+  .skill-title-show {
+    margin: 0;
+    padding-left: 16px;
+  }
+  .skill-years-show {
+    margin: 0;
+    padding-left: 16px;
   }
 
 /* end media tablet phone */
