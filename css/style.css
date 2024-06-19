@@ -624,7 +624,6 @@ main {
 /*+ 主記述部（top）
 /** ===================================== +*/
 
-/*SSS*/
 /*+ ===================================== +*/
 /*+ 主記述部（index）
 /** ===================================== +*/
@@ -644,51 +643,51 @@ main {
 
 .declaration-index {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 240px 1fr;
   grid-template-rows: 72px auto auto 72px auto auto;
   width: 100%;
   margin: 0 auto;
 }
 
 .title-1-index {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 1;
 /*  background-color: #f8bebe;*/
 }
 
 .what-company-index {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 2;
 /*  background-color: #bcf795;*/
 }
 
 .what-service-index {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 3;
 /*  background-color: #aa95f8*/
 }
 
 .title-2-index {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 4;
 /*  background-color: #f8bebe;*/
 }
 
 .principal-index {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 5;
 /*  background-color: #bcf795;*/
 }
 
 .motto {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 6;
 /*  background-color: #aa95f8;*/
 }
 
 /* 個別の構造 */
 .intro-index {
-  padding-bottom: 16px;
+  padding: 0 8px 16px 8px;
 }
 
 .title-area-index {
@@ -721,8 +720,8 @@ main {
 /* 各々の掲示 */
 .figure-index {
   display: block;
-  width: 300px;
-  height: 600px;
+  width: 240px;
+  height: 540px;
   margin: 0 auto;
 /*  background-color: #efff86;*/
 }
@@ -730,17 +729,17 @@ main {
 .caption-index {
   display: block;
   width: 100%;
-  height: 88px;
+  height: 64px;
   padding: 8px 0;
   margin: 0 auto;
-/*  background-color: #b5ffb5;*/
+  background-color: #b5ffb5;
 }
 .caption-index p {
-  font-family: "Noto Serif JP";
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 36px;
-  letter-spacing:2.4px;
+  font-family: "Noto Sans JP";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing:2.2px;
   text-align: center;
   padding: 0;
   margin: 0 auto;
@@ -758,31 +757,33 @@ main {
   height: 100%;
   object-fit: cover;
 }
+
 .describe-index {
   display: block;
   width: 100%;
-  height: 360px;
-  margin: -16px 0;
+  height: 264px;
+  margin: -12px 0;
   padding: 0;
-/*  background-color: #cda4ff; */
+/*  background-color: #cda4ff;*/
 }
 .describe-index ul {
-  margin: 0 12px;
-  padding-top: 40px;
+  margin: 0 12px 0 0;
+  padding-top: 32px;
   height: 360px;
 /*  background-color: #9cfbc0;*/
 }
 .describe-index ul li {
   font-family: "Noto Serif Jp";
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 30px;
-  margin-bottom: 16px;
+  letter-spacing: 1.8px;
+  line-height: 24px;
+  margin-bottom: 12px;
 }
-
+/*BBB*/
 .figure-plate-index {
   width: 100%;
-  height: 436px;
+  height: 380px;
   margin: 0;
   box-shadow: 3px 3px 6px rgba( 0, 0, 0, 0.4 );
 }
@@ -792,7 +793,7 @@ main {
   object-fit: cover;
 }
 .textplate-index {
-  margin-top: -436px;
+  margin-top: -380px;
 }
 
 .figure-index a {
@@ -801,11 +802,11 @@ main {
 
 .jamppage-index {
   width: 100%;
-  padding-top: 56px;;
+  padding-top: 100px;;
 }
 .jamp-fig-index {
-  width: 280px;
-  height: 60px;
+  width: 200px;
+  height: 48px;
   margin: 0 auto;
   object-fit: cover;
 }
@@ -815,59 +816,59 @@ main {
 }
 .jamp-message-index {
   width: 100%;
-  padding-left: 48px;
-  margin-top: -60px;
+  padding-left: 42px;
+  margin-top: -52px;
 }
 .jamp-message-index p {
   font-family: "Noto Sans JP";
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 18px;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.6px;
   color: #605601;
   width: 100%;
   text-align: center;
 }
 
 .principal-caption-index p {
-  font-family: "Noto Serif JP";
-  font-size: 30px;
-  font-weight:600;
-  line-height: 30px;
-  letter-spacing: 2.8px;
+  font-family: "Noto Sans JP";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 2.4px;
   text-align: center;
-  padding-top: 24px;
+  padding-top: 20px;
 }
 .principal-describe-index ul {
   list-style-type: cjk-decimal;
 }
 .principal-describe-index ul li {
-  margin-left: 12px;
-  margin-top: 24px;
+  margin-left: 18px;
+  margin-top: 20px;
 }
 
 .motto-caption-index p {
-  font-family: "Noto Serif JP";
-  font-size: 30px;
-  font-weight:600;
-  line-height: 36px;
-  letter-spacing: 2.8px;
+  font-family: "Noto Sans JP";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 2.4px;
   text-align: center;
-  padding-top: 24px;
+  padding-top: 20px;
 }
 .motto-describe-index {
   display: block;
   width: 100%;
-  padding-top: 36px;
+  padding-top: 24px;
 }
 .motto-describe-index ul {
   display: block;
   width: 100%;
   list-style-type: none;
-  margin-left: 16px;
+  margin-left: 0;
 }
 .motto-describe-index ul li {
-  margin-left: 20px;
+  margin-left: 16x;
   padding-bottom: 10px;
 }
 
@@ -1326,7 +1327,6 @@ main {
   filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
 }
 
-/*AAA*/
 /*+ ===================================== +*/
 /*+ 主記述部（inquiry）
 /** ===================================== +*/
@@ -1513,8 +1513,6 @@ main {
 #send-btn {
   display: none;
 }
-
-/*SSS*/
 
 /*+ ===================================== +*/
 /*+ 主記述部（serviceの呼び出し子画面）
@@ -2269,38 +2267,38 @@ main {
   /* 全体の構造 */
   .declaration-index {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 6fr 0.5fr 6fr 2fr;
     grid-template-rows: auto auto auto auto;
     grid-column-gap: 32px;
   }
 
   .title-1-index {
-    grid-column: 1 / 3;
+    grid-column: 2 / 5;
     grid-row: 1;
   }
 
   .what-company-index {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 2;
   }
 
   .what-service-index {
-    grid-column: 2;
+    grid-column: 4;
     grid-row: 2;
   }
 
   .title-2-index {
-    grid-column: 1 / 3;
+    grid-column: 2 / 5;
     grid-row: 3;
   }
 
   .principal-index {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 4;
   }
 
   .motto {
-    grid-column: 2;
+    grid-column: 4;
     grid-row: 4;
   }
 
@@ -2315,17 +2313,17 @@ main {
   /* 各々の掲示 */
   .figure-index {
     width: 300px;
-    height: 696px;
+    height: 600px;
   }
 
   .caption-index {
     height: 96px;
   }
   .caption-index p {
-    font-size: 28px;
+    font-size: 26px;
     font-weight:600;
     line-height: 36px;
-    letter-spacing:2.8px;
+    letter-spacing:2.6px;
     padding-top: 4px;
   }
   .hr-index {
@@ -2333,31 +2331,32 @@ main {
   .hr-index img {
   }
   .describe-index {
-    height: 440px;
+    height: 300px;
     margin: -8px 0;
+    background-color: #4442d6;
   }
   .describe-index ul {
-    height: 440px;
+    height: 300px;
   }
   .describe-index ul li {
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 2.4px;
-    margin-bottom: 18px;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 2.2px;
+    margin-bottom: 16px;
   }
 
   .figure-plate-index {
-    height: 556px;
+    height: 440px;
   }
   .figure-plate-index img {
   }
   .textplate-index {
-    margin-top: -556px;
+    margin-top: -440px;
   }
 
   .jamppage-index {
-  width: 100%;
-  padding-top: 56px;;
+    width: 100%;
+    padding-top: 88px;;
   }
   .jamp-fig-index {
     width: 240px;
@@ -2376,39 +2375,43 @@ main {
   }
 
   .principal-caption-index p {
-    font-size: 30px;
-    font-weight:600;
-    line-height: 30px;
-    letter-spacing: 2.8px;
-    padding-top: 24px;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 2.6px;
+    padding-top: 26px;
   }
   .principal-describe-index ul {
     margin-left: 16px;
     margin-right: 4px;
   }
   .principal-describe-index ul li {
-    margin-bottom: 32px;
+    font-size: 22px;
+    padding-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 28px;
   }
 
   .motto-caption-index p {
-    font-size: 30px;
-    font-weight:600;
-    line-height: 30px;
-    letter-spacing: 2.8px;
-    padding-top: 24px;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 2.6px;
+    padding-top: 26px;
   }
   .motto-describe-index {
     width: 100%;
-    padding-top: 36px;
+    padding-top: 4px;
   }
   .motto-describe-index ul {
-    width: 100%;
-    list-style-type: none;
-    margin-left: -36px;
+    margin-left: 16px;
+    margin-right: 4px;
   }
   .motto-describe-index ul li {
-    margin-left: 40px;
-    padding-bottom: 10px;
+    font-size: 22px;
+    padding-right: 8px;
+    margin-top: 8px;
+    margin-bottom: 28px;
   }
 
   /*+ ===================================== +*/
@@ -2701,7 +2704,6 @@ main {
   .trademark-aboutus div img {
   }
 
-  /*AAA*/
   /*+ ===================================== +*/
   /*+ 主記述部（inquiry）
   /** ===================================== +*/
@@ -3732,7 +3734,6 @@ main {
   .trademark-aboutus div img {
   }
 
-  /*AAA*/
   /*+ ===================================== +*/
   /*+ 主記述部（inquiry）
   /** ===================================== +*/
