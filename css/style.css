@@ -624,6 +624,7 @@ main {
 /*+ 主記述部（top）
 /** ===================================== +*/
 
+/*SSS*/
 /*+ ===================================== +*/
 /*+ 主記述部（index）
 /** ===================================== +*/
@@ -1325,6 +1326,196 @@ main {
   filter: drop-shadow( 3px 3px 4px  rgba( 0, 0, 0, 0.40));
 }
 
+/*AAA*/
+/*+ ===================================== +*/
+/*+ 主記述部（inquiry）
+/** ===================================== +*/
+/*+++ ビジュアルメイン +++*/
+/* メインビジュアルを非表示 */
+.main-visual {
+  display: none;
+}
+
+.main-visual-title-figure-inquiry span {
+  letter-spacing: 4.8px;
+  color: #242297;
+}
+
+.main-visula-narration-inquiry {
+  line-height: 40px;
+  letter-spacing: 2.4px;
+  margin-top: 3px;
+  text-align: left;
+  color: #181818;
+}
+
+/*+++ 主記述部 +++*/
+.main-description-inquiry {
+  margin-top: 24px;
+}
+
+.caution-inquery {
+  font-family: "Noto Sans Jp";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+  vertical-align: super;
+  color: #e61111;
+}
+
+.container-inquiry {
+  display: grid;
+  grid-template-columns: 0px 300px 1fr;
+  grid-template-rows: 36px 36px;
+  grid-row-gap: 4px;
+  margin: 0 0 24px 16px;
+}
+.child-label-inquiry {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  align-items: center;
+}
+.child-body-inquiry {
+  display: block;
+  grid-column: 2;
+  grid-row: 2;
+  align-items: center;
+}
+
+.container-02-inquiry {
+  display: grid;
+  grid-template-columns: 0px 300px 1fr;
+  grid-template-rows: 60px auto;
+  grid-row-gap: 4px;
+  margin: 0 0 24px 16px;
+}
+.child-label-02-inquiry {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  align-items: center;
+}
+.child-body-02-inquiry {
+  display: block;
+  grid-column: 2;
+  grid-row: 2;
+  align-items: flex-start;
+}
+
+.container-03-inquiry {
+  display: grid;
+  grid-template-columns: 0px 300px 1fr;
+  grid-template-rows: 36px auto;
+  grid-row-gap: 4px;
+  margin: 0 0 24px 16px;
+}
+.child-label-03-inquiry {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  align-items: center;
+}
+.child-body-03-inquiry {
+  display: block;
+  grid-column: 2;
+  grid-row: 2;
+  align-items: flex-start;
+}
+
+.label-inquiry,
+.label-02-inquiry {
+  padding-left: 8px;
+  border-bottom: 2px solid  rgba(16, 16, 16, 0.30);
+  background-color: rgb(252, 255, 58, 0.20);
+}
+.label-02-inquiry {
+  font-family: "Noto Serif JP";
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: 1.6px;
+  padding: 0 8px;
+  align-content: center;
+  color: #181818;
+}
+.contact-textbox,
+.radiobox-inquiry,
+.select-inquiry {
+  padding-left: 8px;
+  height: 36px;
+  width: 300px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid rgba(16, 16, 16, 0.30);
+  background-color: rgba(108, 108, 108, 0.20);
+}
+
+.body-02-inquiry {
+  padding: 8px;
+  width: 300px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid rgba(16, 16, 16, 0.30);
+  background-color: rgba(108, 108, 108, 0.20);
+}
+.body-02-inquiry span {
+  white-space: nowrap;
+}
+.checkbox-inquiry {
+  display: flex;
+  flex-direction: column;
+}
+.flex-inquiry {
+  display: flex;
+  text-align: left;
+  flex-wrap: wrap;
+}
+.flex-inquiry label {
+  padding: 8px 4px;
+}
+
+.sort-inquiry {
+  align-content: center;
+}
+.sp-query {
+  margin-top: -21px;
+}
+
+.textarea-inquiry textarea {
+  width: 99%;
+}
+
+#send-btn,
+#nosend-btn {
+  padding: 4px 8px;
+  margin-top: 32px;
+  margin-left: 12px;
+  margin-bottom: 48px;
+  width: 120px;
+  height: 40px;
+  overflow: hidden;
+}
+#send-btn input {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#nosend-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#send-btn {
+  display: none;
+}
+
+/*SSS*/
+
 /*+ ===================================== +*/
 /*+ 主記述部（serviceの呼び出し子画面）
 /** ===================================== +*/
@@ -1667,7 +1858,6 @@ main {
 /*+ 主記述部（inq-personal-infoの呼び出し子画面）
 /** ===================================== +*/
 
-/*AAA*/
 .main-description-show {
   display: block;
   padding-top: 8px;
@@ -2511,6 +2701,160 @@ main {
   .trademark-aboutus div img {
   }
 
+  /*AAA*/
+  /*+ ===================================== +*/
+  /*+ 主記述部（inquiry）
+  /** ===================================== +*/
+
+  /*+++ ビジュアルメイン +++*/
+  /* メインビジュアルを非表示 */
+  .main-visual {
+    display: none;
+  }
+
+  .main-visual-title-figure-inquiry span {
+    letter-spacing: 4.8px;
+  }
+
+  .main-visula-narration-inquiry {
+    line-height: 48px;
+    letter-spacing: 2.0px;
+  }
+
+  /*+++ 主記述部 +++*/
+  .main-description-inquiry {
+    margin-top: 36px;
+    margin-left: 36px;
+  }
+
+  .container-inquiry {
+    display: grid;
+    grid-template-columns: 0px 300px 40px 300px 1fr;
+    grid-template-rows: 48px;
+    margin: 0 0 32px 16px;
+  }
+  .child-label-inquiry {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+  }
+  .child-body-inquiry {
+    display: block;
+    grid-column: 4;
+    grid-row: 1;
+    align-items: center;
+  }
+
+  .container-02-inquiry {
+    display: grid;
+    grid-template-columns: 0px 640px 1fr;
+    grid-template-rows: 80px auto;
+    grid-row-gap: 4px;
+    margin: 0 0 32px 16px;
+  }
+  .child-label-02-inquiry {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+  }
+  .child-body-02-inquiry {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    align-items: center;
+  }
+
+  .container-03-inquiry {
+    display: grid;
+    grid-template-columns: 0px 640px 1fr;
+    grid-template-rows: 48px auto;
+    grid-row-gap: 4px;
+    margin: 0 0 32px 16px;
+  }
+  .child-label-03-inquiry {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+  }
+  .child-body-03-inquiry {
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    align-items: center;
+  }
+
+  .label-inquiry,
+  .label-02-inquiry {
+    font-family: "Noto Serif JP";
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 40px;
+    letter-spacing: 2.2px;
+    color: #181818;
+    padding-left: 16px;
+    border-bottom: 2px solid  rgba(16, 16, 16, 0.30);
+    background-color: rgb(252, 255, 58, 0.20);
+  }
+  .label-02-inquiry {
+    font-family: "Noto Serif JP";
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 2.4px;
+    color: #181818;
+  }
+  .contact-textbox,
+  .radiobox-inquiry,
+  .select-inquiry  {
+    height: 48px;
+    width: 300px;
+    padding-left: 16px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgba(16, 16, 16, 0.30);
+    background-color: rgba(108, 108, 108, 0.20);
+  }
+
+  .body-02-inquiry {
+    padding: 8px;
+    width: 640px;
+  }
+  .select-query-inquery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .select-query-inquery label {
+    padding: 4px 6px;
+  }
+
+  .flex-inquiry label {
+    padding: 12px 8px;
+  }
+
+  .sort-inquiry {
+  }
+  .sp-query {
+    margin-top: -18px;
+  }
+
+  #send-btn,
+  #nosend-btn {
+    padding: 4px 8px;
+    margin-top: 64px;
+    margin-left: 12px;
+    margin-bottom: 48px;
+    width: 160px;
+    height: 54px;
+  }
+  #send-btn input {
+  }
+  #nosend-btn img {
+  }
+
   /*+ ===================================== +*/
   /*+ 主記述部（serviceの呼び出し子画面）
   /** ===================================== +*/
@@ -2844,7 +3188,6 @@ main {
   /*+ 主記述部（inq-personal-infoの呼び出し子画面）
   /** ===================================== +*/
 
-  /*AAA*/
   .main-description-show {
     display: block;
     margin-left: 16px;
@@ -3389,6 +3732,124 @@ main {
   .trademark-aboutus div img {
   }
 
+  /*AAA*/
+  /*+ ===================================== +*/
+  /*+ 主記述部（inquiry）
+  /** ===================================== +*/
+
+  /* メインビジュアルを非表示 */
+  .main-visual {
+    display: none;
+  }
+  /*+++ ビジュアルメイン +++*/
+  .main-visual-title-figure-inquiry span {
+    letter-spacing: 9.6px;
+  }
+
+  .main-visula-narration-inquiry {
+    line-height: 72px;
+    letter-spacing: 3.2px;
+  }
+
+    /*+++ 主記述部 +++*/
+  .main-description-inquiry {
+    margin-top: 36px;
+    margin-left: 48px;
+  }
+
+  .container-inquiry {
+    display: grid;
+    grid-template-columns: 0px 360px 40px 540px 1fr;
+    grid-template-rows: 54px;
+    margin: 0 0 24px 16px;
+  }
+  .child-label-inquiry {
+    display: block;
+    grid-column: 2;
+    grid-row: 1;
+    align-items: center;
+  }
+  .child-body-inquiry {
+    display: block;
+    grid-column: 4;
+    grid-row: 1;
+    align-items: center;
+  }
+
+  .container-02-inquiry {
+    display: grid;
+    grid-template-columns: 0px 940px 1fr;
+    grid-template-rows: 54px auto;
+    grid-row-gap: 6px;
+    margin: 0 0 24px 16px;
+  }
+
+  .container-03-inquiry {
+    display: grid;
+    grid-template-columns: 0px 940px 1fr;
+    grid-template-rows: 54px auto;
+    grid-row-gap: 4px;
+    margin: 0 0 32px 16px;
+  }
+
+  .label-inquiry {
+    padding-left: 16px;
+    border-bottom: 2px solid  rgba(16, 16, 16, 0.30);
+    background-color: rgb(252, 255, 58, 0.20);
+  }
+  .contact-textbox,
+  .radiobox-inquiry,
+  .select-inquiry {
+    height: 54px;
+    width: 540px;
+    padding-left: 16px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid rgba(16, 16, 16, 0.30);
+    background-color: rgba(108, 108, 108, 0.20);
+  }
+
+  .body-02-inquiry {
+    padding: 8px;
+    width: 940px;
+  }
+  .select-query-inquery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .select-query-inquery label {
+    padding: 2px 6px;
+  }
+
+  .flex-inquiry label {
+    padding: 8px 8px;
+  }
+
+  .sort-inquiry {
+  }
+  .sp-query {
+    margin-top: -16px;
+  }
+
+  #send-btn,
+  #nosend-btn{
+    padding: 4px 8px;
+    margin-top: 64px;
+    margin-left: 12px;
+    margin-bottom: 54px;
+    width: 200px;
+    height: 60px;
+  }
+  #send-btn input {
+    width: 100%;
+    height: 100%;
+  }
+  #nosend-btn img {
+    width: 100%;
+    height: 100%;
+  }
+
   /*+ ===================================== +*/
   /*+ 主記述部（serviceの呼び出し子画面）
   /** ===================================== +*/
@@ -3660,7 +4121,6 @@ main {
     line-height: 28px;
   }
 
-  /*AAA*/
   /*+ ===================================== +*/
   /*+ 主記述部（inq-personal-infoの呼び出し子画面）
   /** ===================================== +*/

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+  <head>
+    <meta charset="UTF-8">
+    <!--    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ミカゲITラボ | 問い合わせ</title>
+
+    <!-- フォント取り込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <!-- JQueryの読み込み -->
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="viewport-test">*indicator*</div>
+
+    <!-- ヘッダー -->
+    <header>
+      <!-- ロゴマーク表示部 -->
+      <div class="trade-mark ">
+        <!-- ロゴマーク -->
+        <figure class="LogoMark"><img src="./image/TradeMark/TradeMark.png" alt="トレードマーク" /></figure>
+        <p class="LogoText"><span class="LogoTextFig">ミカゲITラボ</span></p>
+      </div>
+
+      <!-- スマフォ以外のヘッダーナビゲーション -->
+      <div class="header-nav">
+        <nav>
+          <ul>
+            <li><a href="./index.html">トップ</a></li>
+            <li><a href="./company.html">会社紹介</a></li>
+            <li><a href="./service.html">サービス説明</a></li>
+            <li><a href="./aboutus.html">About US</a></li>
+            <li><a href="./#">問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- スマフォ専用メニュー画面 -->
+      <div class="hamburger-menu">
+
+        <!-- ハンバーガーメニュー -->
+        <figure class="menu-toggle">
+          <img src="./image/parts/hamburger-menu.png" alt="ハンバーガーメニュー" class="hamburger-bottun" />
+        </figure>
+
+        <!-- スマフォ用ナビゲーション画面 -->
+        <div class="menu">
+
+          <!-- 閉じるボタン -->
+          <figure class="close-button">
+            <img src="./image/parts/close-button.png" alt="閉じるボタン" />
+          </figure>
+
+          <!-- スマフォ専用ナビゲーション -->
+          <div class="header-nav-sp">
+            <h3>メニュー</h3>
+            <nav>
+              <ul>
+                <li><a href="./index.html">トップ</a></li>
+                <li><a href="./company.html">会社紹介</a></li>
+                <li><a href="./service.html">サービス説明</a></li>
+                <li><a href="./aboutus.html">About US</a></li>
+                <li><a href="./#">お問い合わせ</a></li>
+              </ul>
+            </nav>
+          </div>
+
+        </div>
+
+        <!-- ここまで：スマフォ専用メニュー画面 -->
+      </div>
+
+    </header>
+
+    <!-- メイン -->
+    <main id="main">
+
+      <!-- メインビジュアル -->
+      <section class="main-visual">
+        <figure class="main-visula-fig">
+          <img src="./image/MainVisual/OrgAboutUS.png" alt="メインビジュアルの背景図" />
+        </figure>
+        <div class="main-visual-title-panel">
+          <div class="main-visual-title-area main-visual-title-area-aboutus">
+            <h3 class="main-visual-title main-visual-title-figure-aboutus">
+              <span>Inquiry(非表示)<span>
+            </h3>
+            <p class="main-visula-narration main-visula-narration-aboutus">
+              副題（非表示）
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 主記述部 -->
+      <section class="main-description">
+        <div class="main-description-inquiry">
+
+          <!-- 全体構成 -->
+          <div class="description-inquiry">
+
+            <h3>問い合わせ</h3>
+
+            <p class="caution-inquiry" style="font-size:1.2rem;color: #a11737">
+              ※ただいまこのフォームでの連絡を受け付けておりません。<br />お手数ですがメール<br/><spam>t-ariyoshi@mikage-it-lab.com</spam><br/>宛でご連絡をお願いします。
+            </p>
+
+            <form class="form-inauiry">
+
+              <!-- 名前 -->
+              <div id="name" class="oneline-inquery container-inquiry">
+                <div class="label-inquiry child-label-inquiry">
+                  <spam class="regtext">お名前　【全角】</spam>
+                  <spam class="caution-inquery">※必須</spam>
+                </div>
+                <div class="body-inquiry child-body-inquiry">
+                  <input id="username-obj" type="text" name="username" placeholder="入力してください..." class="contact-textbox" />
+                </div>
+              </div>
+
+              <!-- 性別 -->
+              <div id="sex" class="oneline-inquery container-inquiry">
+                <div class="label-inquiry child-label-inquiry">
+                  <spam class="regtext">性別</spam>
+                  <spam class="caution-inquery">※必須</spam>
+                </div>
+                <div class="body-inquiry child-body-inquiry radiobox-inquiry sex-inquiery">
+                  <label class="regtext-small"><input type="radio" name="sex" value="male">男性　</label>
+                  <label class="regtext-small"><input type="radio" name="sex" value="female">女性　</label>
+                  <label class="regtext-small"><input type="radio" name="sex" value="other">その他　</label>
+                </div>
+              </div>
+
+              <!-- 電話番号 -->
+              <div id="tel" class="oneline-inquery container-inquiry">
+                <div class="label-inquiry child-label-inquiry">
+                  <spam class="regtext">電話番号</spam>
+                </div>
+                <div class="body-inquiry child-body-inquiry">
+                  <input id="telephone-no" type="text" name="tel-no" size="13" class="contact-textbox" placeholder="090-1234-5678" />
+                </div>
+              </div>
+
+              <!-- 電子メール -->
+              <div id="tel" class="oneline-inquery container-inquiry">
+                <div class="label-inquiry child-label-inquiry">
+                  <spam class="regtext">電子メール</spam>
+                  <spam class="caution-inquery">※必須</spam>
+                </div>
+                <div class="body-inquiry child-body-inquiry">
+                  <input id="mail-object" type="text" name="email" size="28" class="contact-textbox" placeholder="username@example.com" />
+                </div>
+              </div>
+
+              <!-- どこで知りましたか -->
+              <div class="query container-02-inquiry">
+                <div class="label-02-inquiry child-label-02-inquiry">
+                  <spam>どこでミカゲＩＴラボを</spam><span></span>知りましたか？</spam>
+                  <spam class="caution-inquery">　※1つ以上選択</spam>
+                </div>
+                <div class="body-02-inquiry child-body-02-inquiry checkbox-inquiry">
+                  <div class="flex-inquiry regtext-small">
+                    <label><input type="checkbox" name="whereis" value="家族"> 家族から　　</label>
+                    <label><input type="checkbox" name="whereis" value="知人"> 知人から　　</label>
+                    <label><input type="checkbox" name="whereis" value="クチコミ"> クチコミから</label>
+                  </div>
+                  <div class="flex-inquiry regtext-small">
+                    <label><input type="checkbox" name="whereis" value="ネット検索"> ネットを検索して　</label>
+                    <label><input type="checkbox" name="whereis" value="ネット記事"> ネットの記事から　</label>
+                    <label><input type="checkbox" name="whereis" value="SNS"> SNSで見かけた　</label><br>
+                    <label><input type="checkbox" name="whereis" value="他サイト"> ほかのサイトで知った</label>
+                  </div>
+                  <div class="flex-inquiry regtext-small">
+                    <label><input type="checkbox" name="whereis" value="雑誌"> 雑誌で見た　　</label>
+                    <label><input type="checkbox" name="whereis" value="ネット広告"> インターネット広告　　</label>
+                    <label><input type="checkbox" name="whereis" value="ダイレクト"> ダイレクト・メール</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- お問い合わせ -->
+              <div id="tel" class="oneline-inquery container-inquiry">
+                <div class="label-inquiry child-label-inquiry">
+                  <spam class="regtext">問い合わせの目的</spam>
+                  <spam class="caution-inquery">※必須</spam>
+                </div>
+                <div class="sort-inquiry select-inquiry child-body-inquiry  select-inquiry">
+                  <select id="inquiry-purpose" name="inquiry-purpose" class="selectbox-inquiry">
+                    <option value="問合せ">お問い合わせ</option>
+                    <option value="要望">ご要望</option>
+                    <option value="意見">ご意見</option>
+                    <option value="感想">ご感想</option>
+                    <option value="その他">その他</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- その他のお問い合わせ -->
+              <div id="purpose-other" class="squery container-02-inquiry sp-query">
+                <div class="label-02-inquiry child-label-02-inquiry">
+                  <spam class="regtext-small">「その他」を選ばれたときにはご入力ください</spam>
+                  <spam class="caution-inquery"> ※必須20文字以内</spam>
+                </div>
+                <input id="other-inquiry-object" type="text" name="other-inquiry" size="20" class="contact-textbox child-body-02-inquiry other-inquiry"
+                placeholder="その他お問合せの目的..." />
+              </div>
+
+              <!-- お問い合わせの内容 -->
+              <div id="query-content" class="manyline-query container-03-inquiry">
+                <div class="label-02-inquiry  child-label-03-inquiry">
+                  <spam>お問い合わせの内容</spam>
+                  <spam class="caution-inquery"> ※必須200文字以内</spam>
+                </div>
+                <div class="body-02-inquiry child-body-03-inquiry textarea-inquiry">
+                  <textarea id="contact-textarea" placeholder="ご記入ください..." name="inquiry-message" rows="5" maxlength="200"></textarea>
+                </div>
+              </div>
+
+              <!-- 問合せ送信ボタン -->
+              <div id="send-btn">
+                <input id="submit" type="image" src="./image/Button/button-send-active.png" alt="送信ボタン" />
+              </div>
+              <div id="nosend-btn">
+                <img id="no-submit" src="./image/Button/button-send-noactive.png" alt="送信不可ボタン">
+              </div>
+
+            </form>
+
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <!-- flexbox -->
+      <div class="footer-grid">
+        <!-- navigation on footer -->
+        <div class="footer-nav">
+          <h3 class="footer-title">メニュー</h3>
+          <nav>
+            <ul>
+              <li><a href="./index.html">トップ</a></li>
+              <li><a href="./company.html">会社紹介</a></li>
+              <li><a href="./service.html">サービス説明</a></li>
+              <li><a href="./aboutus.html">About US</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- 住所 -->
+        <div class="footer-address">
+          <h3 class="footer-title">住所</h3>
+          <p class="footer-text">
+            〒224-0033
+            神奈川県横浜市都筑区茅ケ崎東<br>
+            1-1-5-503
+          </p>
+        </div>
+        <!-- 電話・Eメール -->
+        <div class="footer-telmail">
+          <h3 class="footer-title">電話・Eメール</h3>
+          <p class="footer-text">
+            Tel: 080-3443-1638<br/>
+            Email:<br/>
+            t-ariyoshi@mikage-it-lab.com
+          </p>
+        </div>
+        <!-- 営業時間 -->
+        <div class="footer-business-hours">
+          <h3 class="footer-title">営業時間</h3>
+          <p class="footer-text">
+            土日、祝日、ゴールデンウィーク、<br/>
+            年末年始を除く平日<br/>
+            10:00 ～ 12:00<br/>
+            13:00 ～ 17:00<br/>
+          </p>
+        </div>
+      </div>
+      <!-- コピーライト -->
+      <div class="footer-copyright">
+        <p class="copyright-text"><span>&copy;2024 Mikage IT Lab.</span>x</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./js/script.js"></script>
+    <script src="./js/script-inquiry.js"></script>
+  </body>
+
+</html>
