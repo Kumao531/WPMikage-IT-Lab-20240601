@@ -1,8 +1,47 @@
 .viewport-test {
-  display: block;
+  display: grid;
+  grid-template-columns: 0.5fr 6fr 20fr 6fr 0.5fr;
+  grid-template-rows: 24px;
   height: 20px;
   width: 100%;
   background-color: #ffffab;
+}
+.ResponsiveSP {
+  display: block;
+}
+.ResponsiveTB {
+  display: none;
+}
+.ResponsivePC {
+  display: none;
+}
+.WP-Logo {
+  display: flex;
+  flex-wrap: nowrap;
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.Responsive-Message {
+  grid-column: 4;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.WP-Logo .WPTrademark {
+  width : 84px;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.WP-Logo .WPTrademark img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 * {
@@ -14,6 +53,7 @@ body {
   position: relative;
   width: 100%;
   margin: 0  auto;
+  background-color: rgba(105, 175, 255, 0.20);
 }
 
 span {
@@ -110,6 +150,9 @@ h2 {
   line-height: 30px;
   letter-spacing: 3.0px;
   color: #181818;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 h3 {
@@ -119,6 +162,9 @@ h3 {
   line-height: 24px;
   letter-spacing: 2.4px;
   color: #181818;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 h4 {
@@ -128,6 +174,9 @@ h4 {
   line-height: 22px;
   letter-spacing: 2.2px;
   color: #181818;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 h5 {
@@ -137,6 +186,9 @@ h5 {
   line-height: 18px;
   letter-spacing: 1.8px;
   color: #181818;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 .regtext {
@@ -146,15 +198,9 @@ h5 {
   line-height: 30px;
   letter-spacing: 2.4px;
   color: #181818;
-}
-
-.regtext {
-  font-family: "Noto Serif JP";
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 30px;
-  letter-spacing: 1.8px;
-  color: #181818;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 .regtext-small {
@@ -164,6 +210,9 @@ h5 {
   line-height: 20px;
   letter-spacing: 1.4px;
   color: #181818;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 /* ========================== */
@@ -544,7 +593,7 @@ header {
 /** ===================================== +*/
 /* ビジュアルメイン画像 */
 .main-visual {
-  display: block;
+/*  display: block;*/
   width: 100%;
   margin: 0 auto;
   padding: 0;
@@ -1019,15 +1068,23 @@ main {
 
 .main-visual-title-figure-service span {
   letter-spacing: 9px;
-  color: #e88665;
-  text-shadow: 3px 3px 4px rgba( 255, 255, 255, 0.70);
+  color: #4d25de;
+  text-shadow:
+    2px 2px 4px rgba( 255, 255, 255, 0.60),
+    -2px -2px 4px rgba( 255, 255, 255, 0.60),
+    -2px 2px 4px rgba( 255, 255, 255, 0.60),
+    2px -2px 4px rgba( 255, 255, 255, 0.60)
 }
 
 .main-visula-narration-service {
   line-height: 40px;
   letter-spacing: 1.6px;
-  color: #e88665;
-  text-shadow: 2px 2px 3px rgba( 255, 255, 255, 0.85);
+  color: #4d25de;
+  text-shadow:
+    2px 2px 4px rgba( 255, 255, 255, 0.70),
+    -2px -2px 4px rgba( 255, 255, 255, 0.70),
+    -2px 2px 4px rgba( 255, 255, 255, 0.70),
+    2px -2px 4px rgba( 255, 255, 255, 0.70)
 }
 
 /*+++ 主記述部 +++*/
@@ -1332,7 +1389,7 @@ main {
 /** ===================================== +*/
 /*+++ ビジュアルメイン +++*/
 /* メインビジュアルを非表示 */
-.main-visual {
+.main-visual-inquiry {
   display: none;
 }
 
@@ -1938,6 +1995,15 @@ main {
 @media screen and (min-width: 768px) {
   .viewport-test{
     background: #9eff8d; /* 黄色 */
+  }
+  .ResponsiveSP {
+    display: none;
+  }
+  .ResponsiveTB {
+    display: block;
+  }
+  .ResponsivePC {
+    display: none;
   }
 
   /* ========================== */
@@ -2710,7 +2776,7 @@ main {
 
   /*+++ ビジュアルメイン +++*/
   /* メインビジュアルを非表示 */
-  .main-visual {
+  .main-visual-inquiry {
     display: none;
   }
 
@@ -3269,6 +3335,15 @@ main {
   .viewport-test{
     background: #C8E3ED; /* 水色 */
   }
+  .ResponsiveSP {
+    display: none;
+  }
+  .ResponsiveTB {
+    display: none;
+  }
+  .ResponsivePC {
+    display: block;
+  }
   /* 表示の最大サイズ */
   body {
     max-width: 2000px;
@@ -3739,7 +3814,7 @@ main {
   /** ===================================== +*/
 
   /* メインビジュアルを非表示 */
-  .main-visual {
+  .main-visual-inquiry {
     display: none;
   }
   /*+++ ビジュアルメイン +++*/
